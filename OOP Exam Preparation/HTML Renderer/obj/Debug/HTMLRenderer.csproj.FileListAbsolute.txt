@@ -1,0 +1,5 @@
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\HTML Renderer_Скелет на задачата\bin\Debug\HTMLRenderer.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\HTML Renderer_Скелет на задачата\bin\Debug\HTMLRenderer.pdb
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\HTML Renderer_Скелет на задачата\obj\Debug\HTMLRenderer.csprojResolveAssemblyReference.cache
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\HTML Renderer_Скелет на задачата\obj\Debug\HTMLRenderer.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\HTML Renderer_Скелет на задачата\obj\Debug\HTMLRenderer.pdb

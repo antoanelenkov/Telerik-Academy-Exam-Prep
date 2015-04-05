@@ -1,0 +1,6 @@
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.exe.config
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\bin\Debug\AcademyEcosystem.pdb
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.csprojResolveAssemblyReference.cache
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Academy Eco system\AcademyEcosystem\AcademyEcosystem\obj\Debug\AcademyEcosystem.pdb

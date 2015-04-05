@@ -1,0 +1,6 @@
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\bin\Debug\Furnitures.exe.config
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\bin\Debug\Furnitures.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\bin\Debug\Furnitures.pdb
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\obj\Debug\FurnitureManufacturer.csprojResolveAssemblyReference.cache
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\obj\Debug\Furnitures.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\Furniture\Furniture_skelet\FurnitureManufacturer\obj\Debug\Furnitures.pdb

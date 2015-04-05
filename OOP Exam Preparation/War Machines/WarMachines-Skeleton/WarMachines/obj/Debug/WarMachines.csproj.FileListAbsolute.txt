@@ -1,0 +1,6 @@
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\bin\Debug\WarMachines.exe.config
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\bin\Debug\WarMachines.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\bin\Debug\WarMachines.pdb
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\obj\Debug\WarMachines.csprojResolveAssemblyReference.cache
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\obj\Debug\WarMachines.exe
+C:\Users\Antoan Elenkov\Documents\Visual Studio 2013\Projects\C#OOP_EXAMS\War Machines\WarMachines-Skeleton\WarMachines\obj\Debug\WarMachines.pdb
