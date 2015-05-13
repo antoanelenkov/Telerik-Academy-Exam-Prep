@@ -1,97 +1,95 @@
-html, body, div, header, h1, h2, nav, ul, li, article {
-    padding: 0;
+body, html, div, h1, h2, nav, ul, li, article {
     margin: 0;
-    color: #8a7671;
-}
-
-body {
-    margin-left: 4px;
+    padding: 0;
 }
 
 html, body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
 
 #wrapper {
     width: 960px;
-    margin: 0;
 }
 
 .clear {
     clear: both;
 }
 
-#wrapper header {
+
+body {
+    padding-left: 4px;
+    font-size: 14px;
+}
+
+header {
+    height: 57px;
+    padding: 20px;
+    border-bottom: 5px solid #3ac319;
     background-image: url('images/header-bg.png');
-    border-bottom: 5px solid #39c518;
-    padding: 22px;
-    height: 55px;
 }
 
 #title h1 {
     float: left;
-    display: inline-block;
+    font-size: 34px;
+    color: #ebfef1;
 }
 
 #title h2 {
-    display: inline-block;
-    clear: both;
     float: left;
-    font-size: 15px;
-    color: #c0c0c0;
+    clear: both;
+    font-size: 14px;
+    color: #C0C0C0;
     font-weight: normal;
 }
 
 #nav ul {
-    float: right;
-    display: inline-block;
-    margin-right: 10px;
-        position: relative;
-    bottom: 15px;
     list-style-type: none;
+    color: #cc6600;
+    float: right;
+    position:relative;
+    top:-15px;
+    margin-right:10px;
 }
 
-    #nav ul li {
-        display: inline-block;
-        color: #c66400;
-        font-size: 18px;
-        margin-left: 15px;
-        font-weight: bold;
-        padding-bottom: 20px;
-    }
-
-#wrapper header h1 {
-    color: #eeffee;
-    font-size: 34px;
-}
-
-#content {
-    width: 760px;
-    display: inline-block;
+#nav li {
+    font-size: 18px;
     float: left;
+    font-weight: bold;
+    margin-left:20px;
+}
+#content{
+    float:left;
 }
 
-    #content h1 {
-        color: #56740b;
-        margin: 25px 0;
-    }
+#content h1 {
+    padding:21px 0 7px 0;
+    font-size: 30px;
+    color:#4f6d46;
+}
+
+#content article{
+    color:#555555;
+    width:763px;
+}
 
 #aside {
-    display: inline-block;
-    float: left;
-    font-size: 14px;
-    color: #56740b;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-top: 20px;
+    color:#555555;
+    float:right;
 }
 
-hr {
-    width: 200px;
+#aside{
+    margin-top:20px;
+    text-transform:uppercase;
+    color:#38620d;
+    font-weight:bold;
+    float:left;
 }
 
-input {
-    width: 155px;
-    height: 24px;
+hr{
+    width:196px;
+}
+
+input{
+    width:155px;
+    height:22px;
 }

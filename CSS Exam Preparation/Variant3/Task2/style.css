@@ -1,3 +1,110 @@
+body, div, ul, li, a, img {
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    width: 960px;
+    font-size: 16px;
+    font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+}
+
+.content {
+    list-style-type: none;
+}
+
+.menu > li {
+    position: relative;
+    width: 130px;
+    height: 18px;
+    margin: 5px;
+    float: left;
+    clear: left;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #b6ff00;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.content {
+    display: none;
+}
+
+    .content img {
+        display: none;
+    }
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu li:hover .content {
+    display: inline-block;
+}
+
+.sub-menu {
+    list-style-type: none;
+}
+
+    .sub-menu li {
+        width: 500px;
+        height: 40px;
+        margin: 5px;
+        padding:15px;
+        float: right;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #008000;
+    }
+
+        .sub-menu li:first-of-type {
+            position: relative;
+            top: -30px;
+            left: 145px;
+        }
+
+        .sub-menu li:nth-of-type(2) {
+            position: relative;
+            left: 145px;
+            top: -30px;
+        }
+
+
+
+        .sub-menu li a {
+            color: white;
+            float: left;
+            margin-top: 11px;
+        }
+
+            .sub-menu li a:hover {
+                text-decoration: underline;
+            }
+
+            .sub-menu li:hover img{
+                display:block;
+                width:450px;
+                height:250px;
+                border:0;
+                border-radius:10px;
+                vertical-align:central;
+
+            }
+
+            .sub-menu li:hover{
+                width:500px;
+                height:300px;
+                display:inline-block;
+            }
+
 html,
 body,
 div,
