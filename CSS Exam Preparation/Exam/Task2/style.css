@@ -1,0 +1,139 @@
+html, body {
+    font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0 auto;
+    width: 1000px;
+    font-weight: 400;
+    -webkit-text-stroke-width: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+html,body,div,h1,h2,hr,header,a,ul{
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    margin-left:12px;
+}
+
+header{
+    font-size:22px;
+}
+
+
+
+#main h2{
+    font-size:24px;
+}
+
+
+
+footer{
+    font-size:14px;
+}
+
+#logo {
+    float:left;
+    padding-right:10px;
+    width:165px;
+    height:65px;
+    background-image: url('images/logo.png');
+}
+
+.separator{
+    margin-top:10px;
+    float:left;
+    height:45px;
+    background-color:black;
+    border-left:5px solid black;
+}
+
+#headerTitle{
+    display:inline-block;
+    padding-top:15px;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+#search{
+    width:700px;
+    height:50px;
+    background-color:#0078D7;
+    clear:both;
+    padding-left:300px;
+    padding-top:15px;
+}
+
+#search input{
+    display:block;
+    width:400px;
+    height:35px;
+}
+#main{
+    padding-left:15px;
+}
+
+#main h1{
+    font-size:30px;
+    color:	#333333;
+    padding-top:15px;
+    padding-bottom:0;
+
+}
+#main  h2{
+        font-weight:normal;
+        color:#505050;
+}
+
+#main  hr{
+    display:inline-block;
+   height: 8px;
+   width:970px;
+   background-color:#333333;
+}
+#main p:first-of-type{
+    margin-top:13px;
+}
+
+#main p{
+    width:970px;
+    font-size:16px;
+    text-align: justify;
+    color:	#505050;
+}
+
+#footer{
+    background-color:#505050;
+    height:20px;
+    width:960px;
+    padding:20px;
+    color:	#CCCCCC;
+    margin-top:30px;
+}
+
+#footer #language{
+    float:left;
+}
+
+#footer #copyright{
+    float:right;
+    font-weight:bold;
+}
+
+#footerMenu{
+    list-style-type:none;
+    float:right;
+}
+
+#footerMenu li{
+    float:left;
+    margin-right:15px;
+}
+
+#footerMenu li a{
+    text-decoration:none;
+    color:#CCCCCC;
+}
