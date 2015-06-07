@@ -1,4 +1,3 @@
-
 //2014.01.Vehicles
 function solve1(params) {
     var s = parseInt(params[0]),
