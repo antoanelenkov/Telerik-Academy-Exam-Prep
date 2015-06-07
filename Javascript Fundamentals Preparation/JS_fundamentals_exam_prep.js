@@ -22,7 +22,7 @@ function solve(params) {
 }
 //result 100/100
 
-//2014.02.Paths
+//2014.02.Paths.
 function solve(params) {
     var rowsAndCols = params[0].split(' '),
         matrix = [],

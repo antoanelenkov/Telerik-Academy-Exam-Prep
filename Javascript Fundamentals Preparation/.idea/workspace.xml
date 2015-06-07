@@ -24,8 +24,8 @@
       <file leaf-file-name="JS_fundamentals_exam_prep.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JS_fundamentals_exam_prep.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55135137">
-              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5054054">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="n#!!doc;n#solve#0" expanded="false" />
               </folding>
@@ -171,7 +171,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -211,8 +211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JS_fundamentals_exam_prep.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55135137">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.5054054">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="n#!!doc;n#solve#0" expanded="false" />
           </folding>
