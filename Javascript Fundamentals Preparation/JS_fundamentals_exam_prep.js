@@ -1,8 +1,6 @@
-/**
- * Created by Antoan Elenkov on 6/7/2015.
- */
+
 //2014.01.Vehicles
-function solve(params) {
+function solve1(params) {
     var s = parseInt(params[0]),
         count = 0,
         motor = 3,
@@ -23,7 +21,7 @@ function solve(params) {
 //result 100/100
 
 //2014.02.Paths.
-function solve(params) {
+function solve2(params) {
     var rowsAndCols = params[0].split(' '),
         matrix = [],
         directions = [];
@@ -96,5 +94,178 @@ var args = [
     'dr dr ul ul ur',
     'dl dr ur dl ur'
 ]
-solve(args);
+solve2(args);
 //result - 100/100
+
+function solve3(params) {
+    var objectCount = parseInt(params[0]);
+    var object = [];
+    for (var i = 0; i < objectCount; i += 1) {
+        var key_value = params[i + 1].split(':');
+        object[key_value[0]] = key_value[1];
+    }
+    var lengthOfText = parseInt(params[objectCount + 1]);
+
+    var input = '';
+    for (var i = 0; i < lengthOfText; i += 1) {
+        input = input + params[i + objectCount + 2] + '\n';
+    }
+
+    var words = [];
+    var conditions = [];
+    var forEachs=[];
+
+    for (var item in object) {
+        if(((object[item].indexOf(',')>=0)||object[item]==='false')||(object[item]==='true')){
+            //booleans
+            if (object[item]==='false'||object[item]==='true') {
+                conditions[item] = object[item];
+            }
+            //arrays
+            if((object[item].indexOf(',') >= 0)){
+                forEachs[item]=object[item].split(',');
+            }
+        }
+        //regular words
+        else {
+            words[item] = object[item];
+        }
+    }
+
+    var output=input;
+
+    //escaping
+    while(output.indexOf('@@')>0){
+        output=output.replace('@@','@');
+    }
+
+    //pure text
+    for(var word in words){
+        var index = 0;
+        do {
+            output=output.replace('@'+word,words[word]);
+        } while((index = output.indexOf('@'+word, index + 1)) > -1);
+    }
+
+    //if-else
+    for(var condition in conditions){
+        if(conditions[condition]==='false'){
+            var startIndex=output.indexOf('@if ('+condition+')');
+            var finalIndex=output.indexOf('}',startIndex);
+            var substrToDelete=output.substring(startIndex,finalIndex+2);
+            output=output.replace(substrToDelete,'');
+        }
+        else{
+            var startIndex=output.indexOf('@if ('+condition+')');
+            var finalIndex=output.indexOf('}',startIndex);
+            var startIndexOfcontent=output.indexOf('<',startIndex);
+            var finalIndexOfcontent=finalIndex-1;
+            var inputString=output.substring(startIndexOfcontent,finalIndexOfcontent+1);
+            //inputString=inputString.replace('@'+);
+            var substrToDelete=output.substring(startIndex,finalIndex+2);
+            output=output.replace(substrToDelete,inputString);
+        }
+    }
+
+    //for-each
+    for(var forEach in forEachs){
+        var startIndex=output.indexOf('@foreach (var '+forEach.substring(0,forEach.length-1));
+        var finalIndex=output.indexOf('}',startIndex);
+        var startIndexOfcontent=output.indexOf('<',startIndex);
+        var finalIndexOfcontent=finalIndex-1;
+        var allInput='';
+        if(startIndex===-1){
+            continue;
+        }
+        for(var i=0;i<forEachs[forEach].length;i+=1){
+            var inputString=output.substring(startIndexOfcontent,finalIndexOfcontent+1);
+            inputString=inputString.replace('@'+forEach.substr(0,forEach.length-1),forEachs[forEach][i]);
+            allInput+=inputString;
+        }
+        var substrToDelete=output.substring(startIndex,finalIndex+2);
+        output=output.replace(substrToDelete,allInput);
+    }
+
+
+    //render sections
+    var sections=[];
+    var firstIndexSections=output.indexOf('@section');
+    var lastIndexSections=output.indexOf('}',firstIndexSections);
+    while((firstIndexSections > -1)){
+        var content=output.substring(firstIndexSections,lastIndexSections+1);
+        sections.push(content);
+        firstIndexSections = output.indexOf('@section',firstIndexSections+1);
+        lastIndexSections=output.indexOf('}',firstIndexSections);
+    }
+
+    for(var section in sections){
+        var firstIndexOfItem=8;
+        var lastIndexOfItem=sections[section].indexOf(' ',10);
+        var item=sections[section].substring(firstIndexOfItem+1,lastIndexOfItem);
+        output=output.replace(sections[section],'').trim();
+
+        var startIndex=output.indexOf('@renderSection("'+item+'")');
+        var finalIndex=output.indexOf(')',startIndex);
+        var substrToDelete=output.substring(startIndex,finalIndex+1);
+        output=output.replace(substrToDelete,(sections[section].substring(lastIndexOfItem+2,sections[section].length-2)));
+    }
+
+console.log(output);
+}
+
+solve3([
+    '6',
+    'title:Telerik Academy',
+    'showSubtitle:true',
+    'subTitle:Free training',
+    'showMarks:false',
+    'marks:3,4,5,6',
+    'students:Pesho,Gosho,Ivan',
+    '42',
+    '@section menu {',
+    '<ul id="menu">',
+    '    <li>Home</li>',
+    '    <li>About us</li>',
+    '</ul>',
+    '}',
+    '@section footer {',
+    '<footer>',
+    '    Copyright Telerik Academy 2014',
+    '</footer>',
+    '}',
+    '<!DOCTYPE html>',
+    '<html>',
+    '<head>',
+    '    <title>Telerik Academy</title>',
+    '</head>',
+    '<body>',
+    '    @renderSection("menu")',
+    '',
+    '    <h1>@title</h1>',
+    '    @if (showSubtitle) {',
+    '        <h2>@subTitle</h2>',
+    '        <div>@@JustNormalTextWithDoubleKliomba ;)</div>',
+    '    }',
+    '',
+    '    <ul>',
+    '        @foreach (var student in students) {',
+    '            <li>',
+    '                @student ',
+    '            </li>',
+    '            <li>Multiline @title</li>',
+    '        }',
+    '    </ul>',
+    '    @if (showMarks) {',
+    '        <div>',
+    '            @marks',
+    '        </div>',
+    '    }',
+    '',
+    '    @renderSection("footer")',
+    '</body>',
+    '</html>'
+]);
+//40/100
+
+var bonus=function(p){return p[0]*p[1]>0?p[0]>0?1:2:p[0]<0?0:3};
+//25/25
