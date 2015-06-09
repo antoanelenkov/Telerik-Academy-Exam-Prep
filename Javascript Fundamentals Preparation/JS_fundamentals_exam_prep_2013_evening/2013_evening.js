@@ -1,6 +1,6 @@
 //01.Sequences
 function solve1(params){
-    var length=params[0]*1;
+    var length=+params[0];
     var sequence=[];
 
     for(var i=0;i<length;i+=1){
@@ -43,7 +43,7 @@ function solve2(params){
     //position parser
     var startPosition=params[1].split(' ');
     var startX=startPosition[0]*1;
-    var startY=startPosition[0]*1;
+    var startY=startPosition[1]*1;
 
     //sequence parser
     var sequence=[];
@@ -66,11 +66,31 @@ function solve2(params){
         else{
             sum+=matrix[row][col];
             matrix[row][col]=0;
-            row=row+sequence[sequenceIteration%args[2]][0];
-            col=col+sequence[sequenceIteration%args[2]][1];
+            row=row+sequence[sequenceIteration%3][0];
+            col=col+sequence[sequenceIteration%3][1];
             sequenceIteration++;
         }
     }
 }
 
 solve2(['6 7 3','0 0','2 2','-2 2','3 -1']);
+
+//3.Clojure Parser
+function solve(params){
+    var commands=[];
+    for(var i=0;i<params.length;i+=1){
+        commands=params[i];
+        if(commands[i].indexOf('/'>=0)&&commands[i].indexOf('0'>=0)){
+            return console.log('Division by zero! At Line:'+i+1);
+        }
+        if(commands[i].indexOf('+'>=0)){
+
+        }
+    }
+}
+
+console.log(solve(['(def func (+ 5 2))',
+    '(def func2 (/  func 5 2 1 0))',
+    '(def func3 (/ func 2))',
+    '(+ func3 func)'
+]));
