@@ -1,17 +1,17 @@
 //indexOf for more than one occurrences
 function myIndexOf(text, subString) {
-    var occurrences = [];
+    var indexOccurrences = [];
     var index = text.indexOf(subString);
     //check for first match
     if (index === -1) {
-        return occurrences;
+        return indexOccurrences;
     }
 
-    while (index >= 0) {
-        occurrences.push(index);
+    while (index > -1) {
+        indexOccurrences.push(index);
         index = text.indexOf(subString, index + 1);
     }
-    return occurrences;
+    return indexOccurrences;
 }
 
 var string = 'asd 5asd  56asd   56';

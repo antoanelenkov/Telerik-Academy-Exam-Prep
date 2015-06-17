@@ -107,8 +107,10 @@ function solve3(params) {
 
     var input = '';
     for (var i = 0; i < lengthOfText; i += 1) {
-        input = input + params[i + objectCount + 2] + '\n';
+        input = input + params[i + objectCount + 2].trimLeft() + '\n';
     }
+
+    //console.log(input);
 
     var words = [];
     var conditions = [];
@@ -133,6 +135,15 @@ function solve3(params) {
 
     var output=input;
 
+
+
+
+    for(var section in sections){
+        //console.log(sections[section]);
+        output=output.replace(sections[section],'').trim();
+    }
+    //console.log(output);
+
     //escaping
     while(output.indexOf('@@')>0){
         output=output.replace('@@','@');
@@ -146,7 +157,7 @@ function solve3(params) {
         } while((index = output.indexOf('@'+word, index + 1)) > -1);
     }
 
-    //if-else
+    //conditions
     for(var condition in conditions){
         if(conditions[condition]==='false'){
             var startIndex=output.indexOf('@if ('+condition+')');
@@ -187,29 +198,36 @@ function solve3(params) {
 
 
     //render sections
+    var html='<!DOCTYPE html>';
     var sections=[];
+
     var firstIndexSections=output.indexOf('@section');
     var lastIndexSections=output.indexOf('}',firstIndexSections);
-    while((firstIndexSections > -1)){
+    while((firstIndexSections > -1&&firstIndexSections<output.indexOf(html))){
         var content=output.substring(firstIndexSections,lastIndexSections+1);
         sections.push(content);
         firstIndexSections = output.indexOf('@section',firstIndexSections+1);
         lastIndexSections=output.indexOf('}',firstIndexSections);
     }
-
     for(var section in sections){
         var firstIndexOfItem=8;
         var lastIndexOfItem=sections[section].indexOf(' ',10);
+        //console.log()
         var item=sections[section].substring(firstIndexOfItem+1,lastIndexOfItem);
         output=output.replace(sections[section],'').trim();
 
+
         var startIndex=output.indexOf('@renderSection("'+item+'")');
+        //console.log(startIndex);
+        //console.log('@renderSection("'+item+'")');
         var finalIndex=output.indexOf(')',startIndex);
-        var substrToDelete=output.substring(startIndex,finalIndex+1);
+        //console.log(finalIndex);
+        var substrToDelete=output.substring(startIndex-1,finalIndex+1);
+        //console.log(output.substring(startIndex,finalIndex+1));
         output=output.replace(substrToDelete,(sections[section].substring(lastIndexOfItem+2,sections[section].length-2)));
     }
-
-console.log(output);
+//console.log('--------------')
+    console.log(output);
 }
 
 solve3([
