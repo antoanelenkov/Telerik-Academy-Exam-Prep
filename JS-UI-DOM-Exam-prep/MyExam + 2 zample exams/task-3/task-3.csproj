@@ -69,12 +69,22 @@
     <Content Include="example\scripts.js" />
     <Content Include="example\styles.css" />
     <Content Include="myExam\handlebars.min.js" />
+    <Content Include="myExam\Task-3.html" />
+    <Content Include="myExam\tasks\handlebars.js" />
+    <Content Include="myExam\tasks\index.html" />
+    <Content Include="myExam\tasks\main.js" />
+    <Content Include="myExam\tasks\result.html" />
+    <Content Include="myExam\tasks\styles.css" />
+    <Content Include="myExam\tasks\task-3.js" />
+    <Content Include="myExam\tests\task-3-tests.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="myExam\package.json" />
+    <Content Include="myExam\Task-3.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

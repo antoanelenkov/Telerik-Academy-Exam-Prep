@@ -73,17 +73,36 @@
     <Content Include="example\jquery.min.js" />
     <Content Include="example\scripts.js" />
     <Content Include="example\styles.css" />
+    <Content Include="myExam\Images\After.png" />
+    <Content Include="myExam\Images\Before.png" />
+    <Content Include="myExam\Images\cat.jpg" />
+    <Content Include="myExam\Images\clicked.png" />
+    <Content Include="myExam\Images\current-selected.png" />
+    <Content Include="myExam\Images\current.png" />
+    <Content Include="myExam\Images\initial.png" />
+    <Content Include="myExam\Images\next.png" />
+    <Content Include="myExam\Images\previous.png" />
+    <Content Include="myExam\Images\selected.png" />
+    <Content Include="myExam\Images\selecting.png" />
     <Content Include="myExam\jquery.min.js" />
     <Content Include="example2\index.html" />
     <Content Include="example2\jquery.min.js" />
     <Content Include="example2\scripts.js" />
     <Content Include="example2\styles.css" />
+    <Content Include="myExam\Task-2.html" />
+    <Content Include="myExam\tasks\index.html" />
+    <Content Include="myExam\tasks\jquery.min.js" />
+    <Content Include="myExam\tasks\style.css" />
+    <Content Include="myExam\tasks\task-2.js" />
+    <Content Include="myExam\tests\tesk-2-zero-tests.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="myExam\package.json" />
+    <Content Include="myExam\Task-2.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

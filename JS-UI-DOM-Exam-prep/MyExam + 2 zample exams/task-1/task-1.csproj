@@ -73,12 +73,24 @@
     <Content Include="example\images\tigers.jpg" />
     <Content Include="example\task-1.html" />
     <Content Include="example\task-1.js" />
+    <Content Include="myExam\images\after-clicking-X-on-green-lantern.png" />
+    <Content Include="myExam\images\no-match.png" />
+    <Content Include="myExam\images\sample.png" />
+    <Content Include="myExam\images\with-search-pattern.png" />
+    <Content Include="myExam\Task-1.html" />
+    <Content Include="myExam\tasks\index.html" />
+    <Content Include="myExam\tasks\main.css" />
+    <Content Include="myExam\tasks\task-1.js" />
+    <Content Include="myExam\tests\tesk-1-zero-tests.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="myExam\package.json" />
+    <Content Include="myExam\Task-1.md" />
+    <Content Include="myExam\tasks\main.styl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,9 +98,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="myExam\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
