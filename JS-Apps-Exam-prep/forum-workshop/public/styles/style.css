@@ -1,0 +1,22 @@
+div, nav, form, p, button {
+    padding: 5px;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    src: url(link-to-proxima-nova-font.woff) format('woff');
+}
+
+div, p, h1, h2, h3, h4, input, button {
+    font-family: 'Lucida Bright', 'Georgia', serif;
+}
+
+.row, div {
+    padding: 10px 10px;
+}
+
+.block {
+    display: block;
+}
