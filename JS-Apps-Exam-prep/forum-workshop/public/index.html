@@ -9,12 +9,21 @@
 <body>
 
 <header>
-    <h1 class="page-header text-center ">Fit Forum</h1>
-    <nav class="navbar row">
-        <div class="col-md-10">
-            <a href="#/threads" class="item">All Forum Posts</a>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="#/threads" class="navbar-btn">| All Posts |</a>
+            <a href="#/threads" class="navbar-btn"> About Us |</a>
+            <a href="#/threads" class="navbar-btn"> FAQ |</a>
         </div>
-    </nav>
+        <div class="col-md-7">
+            <h1 class=" text-center nav-header">Fit Forum</h1>
+        </div>
+        <div class="col-md-2">
+            <button id="threads-login-btn" class="hidden btn btn-primary">Login</button>
+            <button id="threads-logout-btn" class="hidden btn btn-danger">Logout</button>
+        </div>
+    </div>
+    <hr>
 </header>
 
 <div id="content">
@@ -25,11 +34,11 @@
     <br>
     Telerik Academy JS applications exam
 </footer>
-
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bower_components/handlebars/handlebars.js"></script>
 <script src="bower_components/sammy/lib/sammy.js"></script>
+<script src="bower_components/sha1/index.js"></script>
 <script src="scripts/data.js"></script>
 <script src="scripts/templates.js"></script>
 <script src="scripts/index.js"></script>

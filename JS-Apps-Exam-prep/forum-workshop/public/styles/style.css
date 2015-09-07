@@ -2,6 +2,11 @@ div, nav, form, p, button {
     padding: 5px;
 }
 
+hr{
+    margin:0;
+
+}
+
 @font-face {
     font-family: 'Proxima Nova';
     font-style: normal;
@@ -19,4 +24,8 @@ div, p, h1, h2, h3, h4, input, button {
 
 .block {
     display: block;
+}
+
+.nav-header{
+    margin:0px;
 }
