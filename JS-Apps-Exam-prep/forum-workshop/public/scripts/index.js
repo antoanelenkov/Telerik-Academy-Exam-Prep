@@ -11,7 +11,6 @@ var sammy = Sammy('#content', function () {
     $logoutBtn.on('click', function () {
         data.users.logout()
             .then(function () {
-                console.log('in logout btn');
                 renderLoginAndLogoutButton();
                 window.location.hash = ('#/threads');
 
@@ -113,19 +112,19 @@ var sammy = Sammy('#content', function () {
                 $content.html(source(threads));
             })
             .then(function () {
-                var $addPostBtn = $('#addThread-btn'),
-                    $addPostTitleTb = $('#threadTitle-tb'),
-                    $addPostMessageTb = $('#threadMessage-tb'),
-                    $previous = $('#previous-btn'),
+                var $previous = $('#previous-btn'),
                     $next = $('#next-btn');
 
 
                 $previous.on('click', function () {
-                    query.page -= 1;
-                    console.log('previous')
+                    if(query.page!==0){
+                        query.page -= 1;
+                    }
+
                     data.posts.getAll(query)
                         .then(function (respond) {
                             threads = respond.result;
+
                             return templates.get('threads');
                         })
                         .then(function (source) {
@@ -138,19 +137,39 @@ var sammy = Sammy('#content', function () {
 
                 $next.on('click', function () {
                     query.page += 1;
-                    console.log('next')
                     data.posts.getAll(query)
                         .then(function (respond) {
                             threads = respond.result;
+
+                            if(threads.length===0){
+                                query.page -= 1
+                                return null;
+                            }
+
                             return templates.get('threads');
                         })
                         .then(function (source) {
-                            $content.html(source(threads));
+                            if(!!source){
+                                $content.html(source(threads));
+                            }
                         })
                         .then(function(){
                             context.redirect('#/');
                         })
                 })
+            })
+
+    })
+
+    that.get('#/threads/add', function (context) {
+
+        templates.get('addThread')
+            .then(function (source) {
+                $content.html(source);
+
+                var $addPostBtn = $('#addThread-btn'),
+                    $addPostTitleTb = $('#threadTitle-tb'),
+                    $addPostMessageTb = $('#threadMessage-tb');
 
                 $addPostBtn.on('click', function () {
                     var post = {
@@ -160,24 +179,45 @@ var sammy = Sammy('#content', function () {
 
                     data.posts.addPost(post)
                         .then(function () {
-                            context.redirect('#/');
+                            context.redirect('#/threads');
                         })
 
                 })
             })
-
     })
 
-    that.get('#/threads/add', function () {
-        console.log('add post');
-    })
+    that.get('#/threads/:id', function (context) {
+        var thread;
+        data.posts.getById(context.params.id)
+            .then(function(res){
+                thread=res.result;
 
-    that.get('#/threads/:id', function () {
-        console.log('get post by id');
-    })
+                return templates.get('thread');
+            })
+            .then(function (source){
+                $content.html(source(thread));
+            })
+    });
 
-    that.get('#/threads/:id/messages/add', function () {
-        console.log('add message to post with certain id');
+    that.get('#/threads/:id/messages', function (context) {
+        templates.get('addMessage')
+            .then(function (source) {
+                $content.html(source);
+
+                var $addMsgBtn = $('#addMsg-btn'),
+                    $addMsgMessageTb = $('#MsgMessage-tb');
+
+                $addMsgBtn.on('click', function () {
+                    var post = {
+                        text: $addMsgMessageTb.val()
+                    }
+                    data.posts.addMessageToPost(context.params.id,post)
+                        .then(function (res) {
+                            context.redirect('#/threads');
+                        })
+
+                })
+            })
     })
 
 })

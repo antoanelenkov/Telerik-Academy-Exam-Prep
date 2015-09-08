@@ -4,8 +4,6 @@ var data = (function () {
         storage = localStorage;
     //---------------POSTS--------------------
     function getAllPosts(query) {
-
-
         var promise = new Promise(function (resolve, reject) {
             $.ajax({
                 url: 'api/threads',
@@ -25,13 +23,26 @@ var data = (function () {
         return promise;
     }
 
-    function getPostById() {
+    function getPostById(id) {
+        var promise = new Promise(function (resolve, reject) {
+            $.ajax({
+                url: 'api/threads/'+id,
+                type: 'GET',
+                contentType: 'application/json',
+                success: function (data) {
+                    resolve(data);
+                },
+                error: function (err) {
+                    alert('error while loading all posts: ' + err.responseText);
+                    reject();
+                }
+            });
+        })
 
+        return promise;
     }
 
     function addPost(post) {
-        console.log('adding post header: '+storage.getItem(USER_AUTH_KEY_HEADER))
-        console.log('adding post username: '+storage.getItem(USERNAME))
         var promise = new Promise(function (resolve, reject) {
             $.ajax({
                 url: 'api/threads',
@@ -54,7 +65,29 @@ var data = (function () {
         return promise;
     }
 
-    function addMessageToPostWithId() {
+    function addMessageToPostWithId(id,post) {
+        var promise = new Promise(function (resolve, reject) {
+            $.ajax({
+                url: 'api/threads/'+id+'/messages',
+                type: 'POST',
+                data:JSON.stringify(post),
+                headers:{
+                    'x-authkey':storage.getItem(USERNAME)
+                },
+                contentType: 'application/json',
+                success: function (data) {
+                    resolve(data);
+                },
+                error: function (err) {
+                    alert('error while creating new post: ' + err.responseText);
+                    reject();
+                },
+                beforeSend:function(){
+                }
+            });
+        })
+
+        return promise;
     }
 
 
@@ -112,12 +145,10 @@ var data = (function () {
     function getCurrentUser() {
         var promise = new Promise(function (resolve, reject) {
             if (storage.getItem(USER_AUTH_KEY_HEADER) === null) {
-                console.log('unlogged')
                 resolve(null);
 
             }
             else {
-                console.log('logged');
                 resolve(storage.getItem(USERNAME));
             }
         })
@@ -144,7 +175,7 @@ var data = (function () {
             getAll: getAllPosts,
             getById: getPostById,
             addPost: addPost,
-            addMessageToPostWithId: addMessageToPostWithId
+            addMessageToPost: addMessageToPostWithId
         },
         users: {
             register: registerUser,

@@ -5,7 +5,6 @@ var templates=(function(){
 
     function get(name){
         var url='templates/'+name+'.html';
-        console.log(url);
 
         var promise=new Promise(function(resolve,reject){
             $.get(url,function(templateHTML){

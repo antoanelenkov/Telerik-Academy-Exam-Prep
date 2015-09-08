@@ -140,22 +140,27 @@ app.get('/api/threads/:id', function(req, res) {
 });
 
 app.post('/api/threads/:id/messages', function(req, res) {
+  console.log(req.user)
+  console.log(req.body)
   if (!req.user) {
     res.status(401)
       .json({
         err: 'User must be logged in'
       });
   }
+  console.log('postvame message2')
   var message = req.body;
   message.user = {
     username: req.user.username,
     id: req.user.id
   };
+  console.log('postvame message3')
   db.threads.addMessage(req.params.id, message)
     .then(function(message) {
       res.status(201)
         .json(message);
     });
+  console.log('postvame message4')
 });
 var port = 3112;
 app.listen(port, function() {

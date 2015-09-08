@@ -126,24 +126,28 @@ function threadsCreate(thread) {
 }
 
 function threadsAddMessage(id, msg) {
-  return threadsFind({
-      id: id
+  var promise = new Promise(function(resolve, reject) {
+    threadsFind({
+      id: +id
     })
-    .then(function(threads) {
-      var thread = threads[0];
+        .then(function(threads) {
+          var thread = threads[0];
+          if (!thread) {
+            throw new Error('invalid thread id');
+          }
 
-      if (!thread) {
-        throw new Error('invalid thread id');
-      }
+          if (!thread.messages) {
+            thread.messages = [];
+          }
 
-      if (!thread.messages) {
-        thread.messages = [];
-      }
+          msg.postDate = new Date();
 
-      msg.postDate = new Date();
-      thread.messages.push(msg);
-      return thread;
-    });
+          thread.messages.push(msg);
+
+          resolve(thread);
+        });
+  });
+  return promise;
 }
 
 module.exports = {

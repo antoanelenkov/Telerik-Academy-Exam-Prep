@@ -1,25 +1,28 @@
 <h2 class="text-center">All Forum Posts</h2>
+<div class="row">
+    <a href="#/threads/add" class="btn btn-primary">Add new Post</a>
+</div>
 {{#each this}}
-<strong>{{title}}</strong>
+<div class="row">
+    <div class="col-md-2">
+        <a href="#/threads/{{id}}">{{title}}</a>
+    </div>
+    <div class="col-md-1">
+        <a href="#/threads/{{id}}/messages" class="btn btn-primary addMessage">Add Message</a>
+    </div>
+</div>
 <p>
     by: {{user.username}}
 </p>
+<ul>
+    {{#each messages}}
+    <li>{{this.text}}</li>
+    {{/each}}
+</ul>
 <hr>
 {{/each}}
 <button id="previous-btn" class="btn btn-primary">Previous</button>
 <button id="next-btn" class="btn btn-primary">Next</button>
 
-<div class="container">
-    <div class="col-md-3 col-md-offset-4">
-        <div class="row">
-            <label for="threadTitle-tb"> Post title: </label>
-            <input type="text" id="threadTitle-tb" placeholder="Post title here" class="form-control"/>
-        </div>
-        <div class="row">
-            <label for="threadMessage-tb"> Post message: </label>
-            <input type="text" id="threadMessage-tb" placeholder="Post message here" class="form-control"/>
-        </div>
-        <button id="addThread-btn" class="btn btn-primary">Add new Post</button>
-    </div>
-</div>
+
 
