@@ -3,41 +3,6 @@ var sammy = Sammy('#content', function () {
     var user = {},
         that = this;
 
-    renderLoginAndLogoutButton();
-
-    var $loginBtn = $("#threads-login-btn"),
-        $logoutBtn = $("#threads-logout-btn");
-
-    $logoutBtn.on('click', function () {
-        data.users.logout()
-            .then(function () {
-                renderLoginAndLogoutButton();
-                window.location.hash = ('#/threads');
-
-            })
-    });
-
-    $loginBtn.on('click', function () {
-        renderLoginAndLogoutButton();
-        window.location.hash = ('#/login');
-    });
-
-
-    function renderLoginAndLogoutButton() {
-        data.users.getCurrent()
-            .then(function (user) {
-                if (user === null) {
-                    $loginBtn.removeClass('hidden');
-                    $logoutBtn.addClass('hidden');
-                }
-                else {
-                    $loginBtn.addClass('hidden');
-                    $logoutBtn.removeClass('hidden');
-                }
-            });
-    }
-
-
     that.get('#/', function (context) {
         context.redirect('#/threads');
     })
@@ -61,11 +26,11 @@ var sammy = Sammy('#content', function () {
 
                     data.users.login(user)
                         .then(function () {
-                            renderLoginAndLogoutButton();
-                        })
-                        .then(function () {
-                            context.redirect('#/threads');
+                            document.location = '#/threads';
+                            document.location.reload(true);
                         });
+
+                    return false;
                 })
             })
     })
@@ -84,7 +49,7 @@ var sammy = Sammy('#content', function () {
 
                     data.users.register(user)
                         .then(function () {
-                            renderLoginAndLogoutButton();
+                            //renderLoginAndLogoutButton();
                         })
                         .then(function () {
                             context.redirect('#/threads');
@@ -117,7 +82,7 @@ var sammy = Sammy('#content', function () {
 
 
                 $previous.on('click', function () {
-                    if(query.page!==0){
+                    if (query.page !== 0) {
                         query.page -= 1;
                     }
 
@@ -130,7 +95,7 @@ var sammy = Sammy('#content', function () {
                         .then(function (source) {
                             $content.html(source(threads));
                         })
-                        .then(function(){
+                        .then(function () {
                             context.redirect('#/');
                         })
                 })
@@ -141,7 +106,7 @@ var sammy = Sammy('#content', function () {
                         .then(function (respond) {
                             threads = respond.result;
 
-                            if(threads.length===0){
+                            if (threads.length === 0) {
                                 query.page -= 1
                                 return null;
                             }
@@ -149,11 +114,11 @@ var sammy = Sammy('#content', function () {
                             return templates.get('threads');
                         })
                         .then(function (source) {
-                            if(!!source){
+                            if (!!source) {
                                 $content.html(source(threads));
                             }
                         })
-                        .then(function(){
+                        .then(function () {
                             context.redirect('#/');
                         })
                 })
@@ -189,12 +154,12 @@ var sammy = Sammy('#content', function () {
     that.get('#/threads/:id', function (context) {
         var thread;
         data.posts.getById(context.params.id)
-            .then(function(res){
-                thread=res.result;
+            .then(function (res) {
+                thread = res.result;
 
                 return templates.get('thread');
             })
-            .then(function (source){
+            .then(function (source) {
                 $content.html(source(thread));
             })
     });
@@ -211,7 +176,7 @@ var sammy = Sammy('#content', function () {
                     var post = {
                         text: $addMsgMessageTb.val()
                     }
-                    data.posts.addMessageToPost(context.params.id,post)
+                    data.posts.addMessageToPost(context.params.id, post)
                         .then(function (res) {
                             context.redirect('#/threads');
                         })
@@ -224,4 +189,52 @@ var sammy = Sammy('#content', function () {
 
 $(function () {
     sammy.run('#/');
+
+    var $loginBtn = $("#threads-login-btn"),
+        $logoutBtn = $("#threads-logout-btn");
+
+    console.log('in')
+
+    data.users.getCurrent()
+        .then(function (user) {
+            if (user === null) {
+
+                $('#logout-form').addClass('hidden');
+                //$loginBtn.removeClass('hidden');
+                //$logoutBtn.addClass('hidden');
+
+                console.log('in not user')
+
+                $loginBtn.on('click', function () {
+                    console.log('in not user')
+
+                    document.location = '#/login';
+                    document.location.reload(true);
+
+                    return false;
+                });
+            }
+            else {
+                $('#login-form').addClass('hidden');
+                //$loginBtn.addClass('hidden');
+                //$logoutBtn.removeClass('hidden');
+
+
+                console.log('in user')
+
+                $logoutBtn.on('click', function () {
+                    console.log('in not user')
+
+                    data.users.logout()
+                        .then(function () {
+                            document.location = '#/threads';
+                            document.location.reload(true);
+
+                        })
+
+                    return false;
+                });
+
+            }
+        });
 });
