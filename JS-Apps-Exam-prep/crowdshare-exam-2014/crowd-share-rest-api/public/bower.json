@@ -1,0 +1,25 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "homepage": "https://github.com/antoanelenkov/Telerik-Academy-Exam-Prep",
+  "authors": [
+    "dqdo.koleda.bg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "handlebars": "~4.0.2",
+    "jquery": "~2.1.4",
+    "sammy": "~0.7.6",
+    "toastr": "~2.1.2",
+    "underscore": "~1.8.3"
+  }
+}

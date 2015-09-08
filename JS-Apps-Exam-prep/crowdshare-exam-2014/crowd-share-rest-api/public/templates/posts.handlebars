@@ -1,0 +1,20 @@
+<h2 class="text-center">All Posts</h2>
+<div class="row">
+    <a href="#/posts/add" class="btn btn-primary">Add new Post</a>
+</div>
+{{#each this}}
+    <div class="row">
+        <div class="col-md-2">
+            <a href="#/posts">{{title}}</a>
+        </div>
+    </div>
+    <p>
+        content: {{body}}
+    </p>
+    <hr>
+{{/each}}
+<button id="previous-btn" class="btn btn-primary">Previous</button>
+<button id="next-btn" class="btn btn-primary">Next</button>
+
+
+

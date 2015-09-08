@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS exam</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style/site.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css">
+</head>
+<body>
+
+<header>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="#/home" class="navbar-btn">| Home </a>
+            <a href="#/posts" class="navbar-btn">| All Posts |</a>
+        </div>
+        <div class="col-md-7">
+            <h1 class=" text-center nav-header">JS EXAM</h1>
+        </div>
+        <div class="col-md-2">
+            <form id="login-form">
+                <button id="main-login-btn" class="btn btn-primary">Login or Register</button>
+            </form>
+            <form id="logout-form">
+                <button id="main-logout-btn" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+</header>
+
+<div id="content">
+</div>
+
+<footer class="panel-footer text-center">
+    Powered by: SammyJS and Twitter Bootstrap
+    <br>
+       Telerik Academy &copy; JS applications exam
+</footer>
+<!--LIbs-->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+<script src="bower_components/sammy/lib/sammy.js"></script>
+<script src="bower_components/sha1/index.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
+
+<!-- App: Controllers -->
+<script src="controllers/homeController.js"></script>
+<script src="controllers/postsController.js"></script>
+<script src="controllers/usersController.js"></script>
+
+<!-- App: Loaders -->
+<script src="app/data.js"></script>
+<script src="app/templates.js"></script>
+<script src="app/json-requester.js"></script>
+
+<!-- App: Start -->
+<script src="app.js"></script>
+</body>
+</html>

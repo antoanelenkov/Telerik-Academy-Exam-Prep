@@ -1,0 +1,24 @@
+div, nav, form, p, button {
+    padding: 5px;
+}
+
+hr{
+    margin:0;
+
+}
+
+div, p, h1, h2, h3, h4, input, button {
+    font-family: 'Lucida Bright', 'Georgia', serif;
+}
+
+.row, div {
+    padding: 10px 10px;
+}
+
+.block {
+    display: block;
+}
+
+.nav-header{
+    margin:0px;
+}
