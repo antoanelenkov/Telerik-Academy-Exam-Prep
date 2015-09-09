@@ -19,7 +19,7 @@ var usersController = function() {
 
                     data.users.signIn(user)
                         .then(function (respond) {
-                            document.location = '#/posts';
+                            document.location = '#/home';
                             document.location.reload(true);
                                 alert('You successfully signed in');
                         });
@@ -50,7 +50,7 @@ var usersController = function() {
                                 toastr.error('invalid username or password');
                                 return;
                             }
-                            context.redirect('#/posts');
+                            context.redirect('#/home');
                         })
                 })
             })

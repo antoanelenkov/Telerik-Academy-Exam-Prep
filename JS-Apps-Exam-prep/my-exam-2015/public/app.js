@@ -26,6 +26,13 @@
 
         this.get('#/login',usersController.signIn);
         this.get('#/register',usersController.signUp);
+
+        this.bind('mycustom-trigger', function (e, data) {
+            this.redirect('/'); // force redirect
+        });
+
+        //how to use:
+        //context.trigger('mycustom-trigger', context);
     });
 
     $(function() {
