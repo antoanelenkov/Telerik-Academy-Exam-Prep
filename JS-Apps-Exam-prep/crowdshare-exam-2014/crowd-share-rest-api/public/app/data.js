@@ -81,9 +81,16 @@ var data = (function() {
             });
     }
 
-    function postsGet() {
-
-        return jsonRequester.get('/post')
+    function postsGet(username,pattern) {
+        //Query String - 2. check for the query strings
+        var queryString='?';
+        if(username){
+            queryString+='user='+username+'&';
+        }
+        if(pattern){
+            queryString+='pattern='+pattern+'&';
+        }
+        return jsonRequester.get('/post'+queryString)
             .then(function(res) {
                 return res;
             });
@@ -98,7 +105,7 @@ var data = (function() {
         },
         posts: {
             get: postsGet,
-            add: postAdd
+            add: postAdd,
         }
     };
 }());

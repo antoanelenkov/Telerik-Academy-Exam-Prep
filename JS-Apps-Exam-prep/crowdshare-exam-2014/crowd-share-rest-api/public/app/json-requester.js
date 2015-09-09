@@ -15,6 +15,7 @@ var jsonRequester = (function() {
                 data: JSON.stringify(data),
                 success: function(res) {
                     resolve(res);
+                    console.log(res)
                 },
                 error: function(err) {
                     reject(JSON.parse(err.responseText));

@@ -1,16 +1,53 @@
 var postsController = function () {
-    function getAll(context) {
-        var posts;
+    //1.paging
+    var page=0;
+    var size=3;
 
-        data.posts.get().then(function (source) {
-            posts = source;
+    function getAll(context) {
+        //Query String - 1.add parameters and pass them in get function
+        var posts;
+        var user = context.params.user || '';
+        var pattern=context.params.pattern||'';
+
+        data.posts.get(user,pattern).then(function (source) {
+            if(source.length>page*size){
+                //2.paging
+                posts = source.slice(page*size,page*size+size);
+            }
         }).then(function () {
             return templates.get('posts');
         }).then(function (template) {
-            context.$element().html(template(posts));
-        });
+            posts = posts.map(controllerHelpers.fixDate);
 
+            context.$element().html(template(posts));
+
+            $('#search-btn').on('click',function(){
+                var pattern=$('#search-tb').val();
+                context.redirect('#/posts?pattern='+pattern);
+            });
+
+            $('#previous-btn').on('click',function(){
+                //3.paging
+                if(page!=0) {
+                    page -= 1;
+                    $('#next-btn').removeClass('hidden');
+                }
+
+                context.redirect('#/')
+            });
+
+            $('#next-btn').on('click',function(){
+
+                if(!(posts.length<size)){
+                    page+=1;
+                    $('#previous-btn').removeClass('hidden');
+                }
+
+                context.redirect('#/')
+            });
+        });
     }
+
 
     function addPost(context) {
         if (!data.users.hasUser()) {

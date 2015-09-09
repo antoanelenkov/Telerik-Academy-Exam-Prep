@@ -1,0 +1,17 @@
+<p>
+    Posts by: {{this.user.username}}
+</p>
+{{#each this}}
+    <div class="row">
+        <div class="col-md-2">
+            <a href="#/posts">{{title}}</a>
+        </div>
+    </div>
+    <p>
+        content: {{body}}
+    </p>
+    <p>
+        made at: {{postDate}}
+    </p>
+    <hr>
+{{/each}}

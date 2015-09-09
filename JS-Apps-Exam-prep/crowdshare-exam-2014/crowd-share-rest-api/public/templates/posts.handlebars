@@ -1,7 +1,16 @@
 <h2 class="text-center">All Posts</h2>
+<hr>
 <div class="row">
-    <a href="#/posts/add" class="btn btn-primary">Add new Post</a>
+    <div class="col-md-9">
+        <a href="#/posts/add" class="btn btn-primary">Add new Post</a>
+    </div>
+    <div class="col-md-3">
+        <label for="search-tb">Search:</label>
+        <input type="text" id="search-tb" class="form-control-static"/>
+        <button id="search-btn" class="btn btn-primary ">Go!</button>
+    </div>
 </div>
+<hr>
 {{#each this}}
     <div class="row">
         <div class="col-md-2">
@@ -10,6 +19,13 @@
     </div>
     <p>
         content: {{body}}
+    </p>
+    <p>
+        made at: {{postDate}}
+    </p>
+    <p>
+        <!--Query string - 3.Redirect to the page with the query string-->
+        made by:<a href="#/posts?user={{user.username}}">{{user.username}}</a>
     </p>
     <hr>
 {{/each}}
