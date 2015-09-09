@@ -1,19 +1,18 @@
 var postsController = function () {
     //1.paging
-    var page=0;
-    var size=3;
+    var page = 0;
+    var size = 3;
 
     function getAll(context) {
         //Query String - 1.add parameters and pass them in get function
         var posts;
         var user = context.params.user || '';
-        var pattern=context.params.pattern||'';
+        var pattern = context.params.pattern || '';
 
-        data.posts.get(user,pattern).then(function (source) {
-            if(source.length>page*size){
+        data.posts.get(user, pattern).then(function (source) {
                 //2.paging
-                posts = source.slice(page*size,page*size+size);
-            }
+                posts = source.slice(page * size, page * size + size);
+            console.log('posts :'+posts)
         }).then(function () {
             return templates.get('posts');
         }).then(function (template) {
@@ -21,14 +20,15 @@ var postsController = function () {
 
             context.$element().html(template(posts));
 
-            $('#search-btn').on('click',function(){
-                var pattern=$('#search-tb').val();
-                context.redirect('#/posts?pattern='+pattern);
+            $('#search-btn').on('click', function () {
+                var pattern = $('#search-tb').val();
+                page=0;
+                context.redirect('#/posts?pattern=' + pattern);
             });
 
-            $('#previous-btn').on('click',function(){
+            $('#previous-btn').on('click', function () {
                 //3.paging
-                if(page!=0) {
+                if (page != 0) {
                     page -= 1;
                     $('#next-btn').removeClass('hidden');
                 }
@@ -36,15 +36,22 @@ var postsController = function () {
                 context.redirect('#/')
             });
 
-            $('#next-btn').on('click',function(){
+            $('#next-btn').on('click', function () {
 
-                if(!(posts.length<size)){
-                    page+=1;
+                if (!(posts.length < size)) {
+                    page += 1;
                     $('#previous-btn').removeClass('hidden');
                 }
 
                 context.redirect('#/')
             });
+
+            $('.user-posts-btn').on('click',function(ev){
+                var user=$(ev.target).text();
+                page=0;
+
+                context.redirect('#/posts?user='+user);
+            })
         });
     }
 
