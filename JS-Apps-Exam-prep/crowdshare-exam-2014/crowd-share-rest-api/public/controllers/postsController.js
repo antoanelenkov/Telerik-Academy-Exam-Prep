@@ -1,7 +1,9 @@
 var postsController = function () {
     //1.paging
-    var page = 0;
-    var size = 3;
+    var currentPage= 0;
+    var size= 3;
+    var sortByTitleASC=true;
+    var sortByDateASC=true;
 
     function getAll(context) {
         //Query String - 1.add parameters and pass them in get function
@@ -9,12 +11,47 @@ var postsController = function () {
         var postsLength;
         var user = context.params.user || '';
         var pattern = context.params.pattern || '';
+        var page=context.params.pattern||currentPage;
+        var size=context.params.pattern||3;
+        var titleASC=context.params.titleASC||'';
+        var dateASC=context.params.dateASC||'';
+        console.log(currentPage)
+
 
         data.posts.get(user, pattern).then(function (source) {
-            //2.paging
             postsLength=source.length;
-            posts = source.slice(page * size, page * size + size);
-            console.log('posts :' + posts)
+            //1.sorting
+            if(titleASC){
+                if(sortByTitleASC){
+                    posts=_.sortBy(source,'title');
+                    sortByTitleASC=false;
+                }
+                else{
+
+                    posts=_.sortBy(source,'title').reverse();
+                    sortByTitleASC=true;
+                }
+
+                //2.paging
+                posts = posts.slice(page * size, page * size + size);
+            }else if(dateASC){
+                if(sortByDateASC){
+                    posts=_.sortBy(source,'date');
+                    sortByDateASC=false;
+                }
+                else{
+
+                    posts=_.sortBy(source,'date').reverse();
+                    sortByDateASC=true;
+                }
+
+                //2.paging
+                posts = posts.slice(page * size, page * size + size);
+            }else{
+                posts = source.slice(page * size, page * size + size);
+            }
+
+
         }).then(function () {
             return templates.get('posts');
         }).then(function (template) {
@@ -24,32 +61,47 @@ var postsController = function () {
 
             $('#search-btn').on('click', function () {
                 var pattern = $('#search-tb').val();
-                page = 0;
+                currentPage = 0;
                 context.redirect('#/posts?pattern=' + pattern);
+            });
+
+            $('#sort-by-title-btn').on('click', function () {
+                context.redirect('#/posts?titleASC='+sortByTitleASC);
+            });
+
+            $('#sort-by-date-btn').on('click', function () {
+                context.redirect('#/posts?dateASC='+sortByDateASC);
             });
 
             $('#previous-btn').on('click', function () {
                 //3.paging
-                if (page != 0) {
-                    page -= 1;
-                    $('#next-btn').removeClass('hidden');
+                if (currentPage != 0) {
+                    currentPage -= 1;
+                }
+                else{
+                    $('#previous-btn').addClass('hidden');
                 }
 
-                context.redirect('#/')
+
+                context.redirect('#/');
             });
 
             $('#next-btn').on('click', function () {
-                if ((page+1)*size < postsLength) {
-                    page += 1;
+                if ((currentPage+1)*size < postsLength) {
+                    currentPage += 1;
                     $('#previous-btn').removeClass('hidden');
                 }
+                else{
+                    $('#next-btn').addClass('hidden');
+                }
 
-                context.redirect('#/')
+                //context.redirect('#/');
+                context.redirect('#/');
             });
 
             $('.user-posts-btn').on('click', function (ev) {
                 var user = $(ev.target).text();
-                page = 0;
+                currentPage = 0;
 
                 context.redirect('#/posts?user=' + user);
             })
