@@ -1,10 +1,38 @@
-<h1>Welcome to the</h1>
-<strong>Crawd Share</strong>
-</strong>
-<p>This is stupid home page</p>
-<h2>Login and Logout buttons reload the page. This is how this stuff works. That DOES NOT MEAN that the application is not SPA</h2>
-<h2>Check out Doncho's solution in github for 'Self manager'. It is made the same way.</h2>
-<ul>
-    <li>Aditional notes:</li>
-    <li>Not any yet</li>
-</ul>
+<h2 class="text-center">All Fortune Cookies</h2>
+</hr>
+<div class="row">
+    <div class="col-md-2">
+        <a href="#/home/add" class="btn btn-primary">Add new cookie</a>
+    </div>
+    <div class="col-md-3">
+        <label>Sort by:</label>
+        <button id="sort-by-date-btn" class="btn btn-primary">Date</button>
+        <button id="sort-by-likes-btn" class="btn btn-primary">Likes</button>
+    </div>
+    <div class="col-md-3 ">
+        <a href="#/my-cookie" class="btn-lg btn-primary">Get hourly cookie</a>
+    </div>
+</div>
+</hr>
+<div class="row">
+        {{#each this}}
+            <h2>
+                Category:  <a href="#/home?category={{category}}">{{category}}</a>
+            </h2>
+            <p>
+                Content: {{text}}
+            </p>
+            <p>Likes: {{likes}} Dislikes: {{dislikes}}</p>
+            <img src="{{img}}" width="200" height="200"/>
+            <div class="row">
+                <div class="col-md-5">
+                    <button  class="btn btn-primary like-btn" data-button="{{id}}">Like</button>
+                    <button  class="btn btn-primary dislike-btn" data-button="{{id}}">Dislike</button>
+                    <button  class="btn btn-primary share-btn" data-button="{{id}}">Share</button>
+                </div>
+            </div>
+            <hr>
+        {{/each}}
+</div>
+
+

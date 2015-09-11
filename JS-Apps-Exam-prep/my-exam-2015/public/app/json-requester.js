@@ -18,7 +18,7 @@ var jsonRequester = (function() {
                     console.log(res)
                 },
                 error: function(err) {
-                    reject(JSON.parse(err.responseText));
+                    reject(err.responseText);
                 }
             });
         });

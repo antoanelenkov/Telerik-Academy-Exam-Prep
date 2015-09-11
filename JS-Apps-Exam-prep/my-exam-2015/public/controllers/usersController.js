@@ -19,9 +19,12 @@ var usersController = function() {
 
                     data.users.signIn(user)
                         .then(function (respond) {
+                            if(respond='error'){
+                                toastr.error('Invalid username or password');
+                                return;
+                            }
                             document.location = '#/home';
                             document.location.reload(true);
-                                alert('You successfully signed in');
                         });
 
                     return false;
@@ -35,11 +38,21 @@ var usersController = function() {
                 context.$element().html(template());
             })
             .then(function () {
+                console.log(3333333)
                 var $regBtn = $('#btn-register');
 
                 $regBtn.on('click', function () {
                     user.username = $('#tb-username-register').val();
                     user.password = $('#tb-password-register').val();
+
+                    if(!validator.userRegistrationValidation.usernameValidation(user.username)){
+                        console.log(444)
+                        toastr.error('Username can contain only Latin letters, digits and the characters "_" and "." and be between 6 and 30 symbols.');
+
+                        $('#tb-username-register').val('');
+
+                        return;
+                    }
 
                     data.users.register(user)
                         .then(function (respond) {

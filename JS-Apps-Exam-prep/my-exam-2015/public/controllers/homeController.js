@@ -1,6 +1,6 @@
 var homeController = function() {
     function getHomePage(context) {
-        templates.get('home')
+        templates.get('info')
             .then(function(template) {
                 context.$element().html(template());
             });

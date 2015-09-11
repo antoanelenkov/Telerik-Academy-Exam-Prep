@@ -9,7 +9,7 @@
         "onclick": null,
         "showDuration": "500",
         "hideDuration": "500",
-        "timeOut": "2000",
+        "timeOut": "4000",
         "extendedTimeOut": "1000",
         "showEasing": "swing",
         "hideEasing": "linear",
@@ -20,21 +20,32 @@
     var sammyApp = Sammy('#content', function() {
 
         this.get('#/',function(context){
-            context.redirect('#/posts');
+            context.redirect('#/cookies');
         })
-        this.get('#/home',homeController.getHomePage)
+
+        this.get('#/info',homeController.getHomePage)
+
 
         this.get('#/login',usersController.signIn);
         this.get('#/register',usersController.signUp);
 
-        this.bind('mycustom-trigger', function (e, data) {
-            this.redirect('/'); // force redirect
+        this.get('#/',cookiesController.getAll)
+        this.get('#/home',cookiesController.getAll);
+        this.get('#/home/add',cookiesController.addCookie);
+        this.get('#/home/category',cookiesController.getByCategory);
+        this.get('#/my-cookie',cookiesController.getHourlyCookie)
+
+        this.get('#/buffer',function(context){
+            context.redirect('#/home');
         });
+
+        //this.bind('mycustom-trigger', function (e, data) {
+        //    this.redirect('#/cookies'); // force redirect
+        //});
 
         //how to use:
         //context.trigger('mycustom-trigger', context);
     });
-
     $(function() {
         sammyApp.run('#/home');
 
@@ -46,7 +57,7 @@
             $logoutBtn.on('click', function () {
                 data.users.signOut()
                     .then(function () {
-                        document.location = '#/posts';
+                        document.location = '#/home';
                         document.location.reload(true);
                     })
 
