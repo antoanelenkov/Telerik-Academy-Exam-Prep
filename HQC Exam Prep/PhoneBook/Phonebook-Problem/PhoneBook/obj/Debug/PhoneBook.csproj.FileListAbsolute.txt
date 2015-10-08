@@ -1,0 +1,9 @@
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\bin\Debug\PowerCollections.dll
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\bin\Debug\PowerCollections.xml
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\obj\Debug\PhoneBook.csprojResolveAssemblyReference.cache
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\bin\Debug\PhoneBook.exe
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\bin\Debug\PhoneBook.pdb
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\obj\Debug\PhoneBook.exe
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\obj\Debug\PhoneBook.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\HQC Exam Prep\PhoneBook\Phonebook-Problem\PhoneBook\obj\Debug\PhoneBook.exe
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\HQC Exam Prep\PhoneBook\Phonebook-Problem\PhoneBook\obj\Debug\PhoneBook.pdb

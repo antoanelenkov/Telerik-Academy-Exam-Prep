@@ -1,0 +1,9 @@
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\bin\Debug\PowerCollections.dll
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\bin\Debug\PowerCollections.xml
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\obj\Debug\ConsoleApplication1.exe
+C:\Users\Antoan\Desktop\1\Phonebook-Problem\PhoneBook\obj\Debug\ConsoleApplication1.pdb
