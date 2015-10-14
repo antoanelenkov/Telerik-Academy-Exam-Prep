@@ -45,16 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\AddPhoneNumberCommand.cs" />
+    <Compile Include="Commands\AddPhoneCommand.cs" />
+    <Compile Include="Commands\ChangePhoneCommand.cs" />
     <Compile Include="Commands\Contracts\ICommand.cs" />
     <Compile Include="Common\Constants\GlobalConstants.cs" />
     <Compile Include="Common\Enums\CommandType.cs" />
     <Compile Include="Data\Contracts\IPhoneBookRepository.cs" />
-    <Compile Include="PhoneBookEngine.cs" />
+    <Compile Include="IPhonebookRepository.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="OutputMessage\Contracts\IOutputMessage.cs" />
+    <Compile Include="OutputMessage\OutputMessage.cs" />
     <Compile Include="PhoneNumberFormatters\Contracts\IPhoneNumberFormatter.cs" />
     <Compile Include="PhoneNumberFormatters\PhoneNumberFormatter.cs" />
     <Compile Include="Printers\Contracts\IPrinter.cs" />
     <Compile Include="Printers\ConsolePrinter.cs" />
+    <Compile Include="REP.cs" />
+    <Compile Include="RepNew.cs" />
+    <Compile Include="UserEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

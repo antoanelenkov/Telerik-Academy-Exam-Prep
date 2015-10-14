@@ -2,6 +2,6 @@
 {
     interface ICommand
     {
-        void Execute();
+        void Execute(string[] input);
     }
 }
