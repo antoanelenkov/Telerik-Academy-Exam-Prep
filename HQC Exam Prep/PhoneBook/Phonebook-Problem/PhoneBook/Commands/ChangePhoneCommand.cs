@@ -1,17 +1,11 @@
-﻿using PhoneBook.Commands.Contracts;
-
-namespace PhoneBook.Commands
+﻿namespace PhoneBook.Commands
 {
+    using Contracts;
     using Data.Contracts;
     using OutputMessageFormatters.Contracts;
     using PhoneNumberFormatters.Contracts;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
-    class ChangePhoneCommand : ICommand
+    internal class ChangePhoneCommand : ICommand
     {
         private readonly IPhoneBookRepository data;
         private readonly IPhoneNumberFormatter formatter;

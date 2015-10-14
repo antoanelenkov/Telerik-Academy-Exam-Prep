@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
-
-namespace PhoneBook.Problem_2
+﻿namespace PhoneBook.Data
 {
-    internal interface IUserEntry
+    using System.Collections.Generic;
+
+    public interface IUserEntry
     {
         ISet<string> Phones { get; set; }
 
         string Name { get; set; }
 
-        int CompareTo(UserEntry other);
+        int CompareTo(IUserEntry other);
+
         string ToString();
     }
 }

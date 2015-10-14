@@ -1,22 +1,22 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PhoneBook.Problem_2
+namespace PhoneBook.Data
 {
-    internal class UserEntry : IComparable<UserEntry>, IUserEntry
-    {
-        public ISet<string> Phones { get; set; }
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
 
+    internal class UserEntry : IComparable<IUserEntry>, IUserEntry
+    {
         public UserEntry(string name, ISet<string> phones)
         {
-            Name = name;
-            Phones = phones;
+            this.Name = name;
+            this.Phones = phones;
         }
+
+        public ISet<string> Phones { get; set; }
 
         public string Name { get; set; }
 
-        public int CompareTo(UserEntry other)
+        public int CompareTo(IUserEntry other)
         {
             return this.Name.CompareTo(other.Name);
         }
@@ -26,10 +26,10 @@ namespace PhoneBook.Problem_2
             var sb = new StringBuilder();
 
             sb.Append('[');
-            sb.Append(Name);
+            sb.Append(this.Name);
 
             var isFirstNumber = true;
-            foreach (var phone in Phones)
+            foreach (var phone in this.Phones)
             {
                 if (isFirstNumber)
                 {
@@ -40,8 +40,10 @@ namespace PhoneBook.Problem_2
                 {
                     sb.Append(", ");
                 }
+
                 sb.Append(phone);
             }
+
             sb.Append(']');
 
             return sb.ToString();

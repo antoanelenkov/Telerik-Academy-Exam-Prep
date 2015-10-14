@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.Commands.Contracts
 {
-    interface ICommand
+    public interface ICommand
     {
         void Execute(string[] input);
     }

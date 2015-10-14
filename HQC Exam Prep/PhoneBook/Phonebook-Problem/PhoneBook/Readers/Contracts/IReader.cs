@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.Readers.Contracts
 {
-    interface IReader
+    public interface IReader
     {
         string ReadInput();
     }

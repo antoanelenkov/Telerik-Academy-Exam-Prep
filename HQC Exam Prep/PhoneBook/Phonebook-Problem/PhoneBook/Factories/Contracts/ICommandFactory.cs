@@ -1,14 +1,9 @@
-﻿using PhoneBook.Commands.Contracts;
-using PhoneBook.Common.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PhoneBook.Factories.Contracts
+﻿namespace PhoneBook.Factories.Contracts
 {
-    interface ICommandFactory
+    using Commands.Contracts;
+    using Common.Enums;
+
+    public interface ICommandFactory
     {
         ICommand CreateCommand(CommandType type);
     }

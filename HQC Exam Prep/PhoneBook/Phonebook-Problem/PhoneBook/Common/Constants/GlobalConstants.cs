@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.Common.Constants
 {
-    class GlobalConstants
+    internal class GlobalConstants
     {
         public const string CountryCode = "+359";
     }

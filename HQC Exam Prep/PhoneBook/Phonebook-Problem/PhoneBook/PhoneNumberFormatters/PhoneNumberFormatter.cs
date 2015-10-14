@@ -5,7 +5,7 @@
     using Common.Constants;
     using Contracts;
 
-    public class PhoneNumberFormatter:IPhoneNumberFormatter
+    public class PhoneNumberFormatter : IPhoneNumberFormatter
     {
         public string Format(string phoneNumber)
         {
@@ -21,12 +21,12 @@
 
             if (formattedPhoneNumber.Length >= 2 && formattedPhoneNumber[0] == '0' && formattedPhoneNumber[1] == '0')
             {
-                formattedPhoneNumber.Remove(0, 1); formattedPhoneNumber[0] = '+';
+                formattedPhoneNumber.Remove(0, 1);
+                formattedPhoneNumber[0] = '+';
             }
 
             while (formattedPhoneNumber.Length > 0 && formattedPhoneNumber[0] == '0')
             {
-
                 formattedPhoneNumber.Remove(0, 1);
             }
 

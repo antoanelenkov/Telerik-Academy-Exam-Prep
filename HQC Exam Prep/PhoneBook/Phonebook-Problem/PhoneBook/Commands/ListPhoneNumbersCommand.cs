@@ -1,17 +1,15 @@
-﻿using PhoneBook.Commands.Contracts;
-using PhoneBook.Data.Contracts;
-using PhoneBook.OutputMessageFormatters.Contracts;
-using PhoneBook.PhoneNumberFormatters.Contracts;
-using PhoneBook.Problem_2;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PhoneBook.Commands
+﻿namespace PhoneBook.Commands
 {
-    class ListPhoneNumbersCommand : ICommand
+    using System;
+    using System.Collections.Generic;
+
+    using Contracts;
+    using Data;
+    using Data.Contracts;
+    using OutputMessageFormatters.Contracts;
+    using PhoneNumberFormatters.Contracts;
+
+    internal class ListPhoneNumbersCommand : ICommand
     {
         private readonly IPhoneBookRepository data;
         private readonly IPhoneNumberFormatter formatter;

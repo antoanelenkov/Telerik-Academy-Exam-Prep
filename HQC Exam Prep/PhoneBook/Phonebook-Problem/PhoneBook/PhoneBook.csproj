@@ -57,7 +57,9 @@
     <Compile Include="Entries\Contracts\IUserEntry.cs" />
     <Compile Include="Factories\CommandFactory.cs" />
     <Compile Include="Factories\Contracts\ICommandFactory.cs" />
-    <Compile Include="EntryPoint.cs" />
+    <Compile Include="EntryPoint.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="OutputMessageFormatters\Contracts\IOutputMessage.cs" />
     <Compile Include="OutputMessageFormatters\OutputMessage.cs" />
     <Compile Include="PhoneNumberFormatters\Contracts\IPhoneNumberFormatter.cs" />

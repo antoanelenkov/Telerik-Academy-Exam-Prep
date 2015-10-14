@@ -1,10 +1,11 @@
 ﻿namespace PhoneBook.Commands
 {
     using System.Linq;
+
     using Contracts;
     using Data.Contracts;
-    using PhoneNumberFormatters.Contracts;
     using OutputMessageFormatters.Contracts;
+    using PhoneNumberFormatters.Contracts;
 
     internal class AddPhoneCommand : ICommand
     {
@@ -26,18 +27,18 @@
 
             for (var i = 0; i < phoneNumbers.Count; i++)
             {
-                phoneNumbers[i] = formatter.Format(phoneNumbers[i]);
+                phoneNumbers[i] = this.formatter.Format(phoneNumbers[i]);
             }
 
-            var isAdded = data.AddPhone(name, phoneNumbers);
+            var isAdded = this.data.AddPhone(name, phoneNumbers);
 
             if (isAdded)
             {
-                output.AddToOutputMessage("Phone entry created.");
+                this.output.AddToOutputMessage("Phone entry created.");
             }
             else
             {
-                output.AddToOutputMessage("Phone entry merged");
+                this.output.AddToOutputMessage("Phone entry merged");
             }
         }
     }

@@ -1,8 +1,8 @@
-﻿using System.Text;
-
-namespace PhoneBook.OutputMessageFormatters.Contracts
+﻿namespace PhoneBook.OutputMessageFormatters.Contracts
 {
-    interface IOutputMessageFormatter
+    using System.Text;
+
+    public interface IOutputMessageFormatter
     {
         StringBuilder Output { get; set; }
 

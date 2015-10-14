@@ -1,9 +1,10 @@
 ﻿namespace PhoneBook.Printers
 {
-    using Contracts;
     using System;
 
-    class ConsolePrinter : IPrinter
+    using Contracts;
+
+    internal class ConsolePrinter : IPrinter
     {
         public void Print(string msg)
         {

@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.PhoneNumberFormatters.Contracts
 {
-    interface IPhoneNumberFormatter
+    public interface IPhoneNumberFormatter
     {
         string Format(string phoneNumber);
     }

@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using PhoneBook.Printers;
-using PhoneBook.Printers.Contracts;
-using PhoneBook.Data.Contracts;
-
-namespace PhoneBook.Problem_2
+namespace PhoneBook.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Contracts;
+
     internal class PhoneBookRepository : IPhoneBookRepository
     {
-        public IList<IUserEntry> entries = new List<IUserEntry>();
+        private IList<IUserEntry> entries = new List<IUserEntry>();
 
         public void RemovePhone(string phoneNumberToRemove)
         {
@@ -19,7 +18,7 @@ namespace PhoneBook.Problem_2
             }
 
             var phoneNumberIsFound = false;
-            IUserEntry entryToRemove=null;
+            IUserEntry entryToRemove = null;
             foreach (var entry in this.entries)
             {
                 var phoneNumber = entry.Phones.Where(p => p.ToString() == phoneNumberToRemove).FirstOrDefault();
@@ -61,7 +60,7 @@ namespace PhoneBook.Problem_2
                     entry.Phones.Add(num);
                 }
 
-                entries.Add(entry);
+                this.entries.Add(entry);
                 return true;
             }
             else
@@ -70,6 +69,7 @@ namespace PhoneBook.Problem_2
                 {
                     entryName.Phones.Add(num);
                 }
+
                 return false;
             }
         }
@@ -91,16 +91,17 @@ namespace PhoneBook.Problem_2
 
         public IUserEntry[] ListEntries(int start, int num)
         {
-            if (start < 0 || start + num > entries.Count)
+            if (start < 0 || start + num > this.entries.Count)
             {
                 throw new ArgumentOutOfRangeException("Invalid start index or count.");
             }
+
             this.entries.OrderBy(x => x.Name);
             IUserEntry[] newEntries = new UserEntry[num];
 
             for (var i = start; i <= start + num - 1; i++)
             {
-                var entry = entries[i];
+                var entry = this.entries[i];
                 newEntries[i - start] = entry;
             }
 

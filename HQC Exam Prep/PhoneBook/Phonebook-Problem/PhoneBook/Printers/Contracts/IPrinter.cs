@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook.Printers.Contracts
 {
-    interface IPrinter
+    public interface IPrinter
     {
         void Print(string msg);
     }

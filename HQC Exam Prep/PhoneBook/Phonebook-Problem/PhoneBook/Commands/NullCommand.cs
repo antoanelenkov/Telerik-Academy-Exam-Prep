@@ -1,9 +1,8 @@
 ﻿namespace PhoneBook.Commands
 {
-    using System;
-    using PhoneBook.Commands.Contracts;
+    using Contracts;
 
-    class NullCommand : ICommand
+    internal class NullCommand : ICommand
     {
         public void Execute(string[] input)
         {            

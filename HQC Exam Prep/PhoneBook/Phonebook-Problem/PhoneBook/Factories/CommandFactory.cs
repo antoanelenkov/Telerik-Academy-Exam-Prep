@@ -1,19 +1,14 @@
 ﻿namespace PhoneBook.Factories
 {
-    using Contracts;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using Commands;
     using Commands.Contracts;
     using Common.Enums;
-    using Commands;
+    using Contracts;
     using Data.Contracts;
-    using PhoneNumberFormatters.Contracts;
     using OutputMessageFormatters.Contracts;
+    using PhoneNumberFormatters.Contracts;
 
-    class CommandFactory : ICommandFactory
+    internal class CommandFactory : ICommandFactory
     {
         private readonly IPhoneBookRepository data;
         private readonly IPhoneNumberFormatter formatter;
@@ -30,11 +25,15 @@
         {
             switch (type)
             {
-                case CommandType.AddPhoneNumbers: { return new AddPhoneCommand(formatter, data, output); }
-                case CommandType.ChangePhoneNumber: { return new ChangePhoneCommand(formatter, data, output); }
-                case CommandType.ListPhoneNumbers: { return new ListPhoneNumbersCommand(formatter, data, output); }
-                case CommandType.RemovePhoneNumber: { return new RemovePhoneCommand(formatter, data, output); }
-                default:return new NullCommand();
+                case CommandType.AddPhoneNumbers:
+                    return new AddPhoneCommand(this.formatter, this.data, this.output);
+                case CommandType.ChangePhoneNumber:
+                        return new ChangePhoneCommand(this.formatter, this.data, this.output);
+                case CommandType.ListPhoneNumbers:
+                        return new ListPhoneNumbersCommand(this.formatter, this.data, this.output);
+                case CommandType.RemovePhoneNumber:
+                        return new RemovePhoneCommand(this.formatter, this.data, this.output);
+                default: return new NullCommand();
             }
         }
     }

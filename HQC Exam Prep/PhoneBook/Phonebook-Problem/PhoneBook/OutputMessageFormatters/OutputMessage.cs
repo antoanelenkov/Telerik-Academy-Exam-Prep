@@ -1,21 +1,17 @@
 ﻿namespace PhoneBook.OutputMessageFormatters
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
-    using PhoneBook.OutputMessageFormatters.Contracts;
 
+    using Contracts;
 
-    class OutputMessageFormatter :IOutputMessageFormatter
-    {
-        public StringBuilder Output { get; set; }
-
+    internal class OutputMessageFormatter : IOutputMessageFormatter
+    { 
         public OutputMessageFormatter()
         {
             this.Output = new StringBuilder();
         }
+
+        public StringBuilder Output { get; set; }
 
         public void AddToOutputMessage(string text)
         {

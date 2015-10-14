@@ -1,9 +1,10 @@
-﻿using PhoneBook.Problem_2;
-using System.Collections.Generic;
-
-namespace PhoneBook.Data.Contracts
+﻿namespace PhoneBook.Data.Contracts
 {
-    interface IPhoneBookRepository
+    using System.Collections.Generic;
+
+    using Data;
+
+    public interface IPhoneBookRepository
     {
         bool AddPhone(string name, IEnumerable<string> phoneNumbers);
 
