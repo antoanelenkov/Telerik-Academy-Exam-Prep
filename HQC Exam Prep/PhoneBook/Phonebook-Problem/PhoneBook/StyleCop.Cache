@@ -2418,11 +2418,14 @@
     </timestamps>
     <violations />
   </sourcecode>
+  <project key="1104191973">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="PhoneBookRepository.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2015/10/08 13:14:34.078</styleCop>
       <settingsFile>2015/10/14 15:26:44.124</settingsFile>
-      <sourceFile>2015/10/14 16:23:07.682</sourceFile>
+      <sourceFile>2015/10/14 16:38:18.947</sourceFile>
       <parser>2015/10/08 13:14:34.078</parser>
       <StyleCop.CSharp.DocumentationRules>2015/10/08 13:14:34.078</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>1568203149</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -2439,9 +2442,33 @@
       <StyleCop.CSharp.SpacingRules>2015/10/08 13:14:34.078</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations />
+    <violations>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
+        <context>Using directives must be sorted alphabetically by the namespaces.</context>
+        <line>5</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives" ruleCheckId="SA1208">
+        <context>System using directives must be placed before all other using directives.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
+        <context>The spacing around the symbol '+' is invalid.</context>
+        <line>26</line>
+        <index>890</index>
+        <endIndex>890</endIndex>
+        <startLine>26</startLine>
+        <startColumn>44</startColumn>
+        <endLine>26</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
+        <context>The spacing around the symbol '+' is invalid.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
   </sourcecode>
-  <project key="1104191973">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
 </stylecopresultscache>

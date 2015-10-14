@@ -5,6 +5,7 @@ namespace PhoneBook.Data
     using System.Linq;
 
     using Contracts;
+    using System.Diagnostics;
 
     public class PhoneBookRepository : IPhoneBookRepository
     {
@@ -22,7 +23,7 @@ namespace PhoneBook.Data
             foreach (var entry in this.entries)
             {
                 var phoneNumber = entry.Phones.Where(p => p.ToString() == phoneNumberToRemove).FirstOrDefault();
-
+                Debug.Write("null ot not: "+phoneNumber);
                 if (phoneNumber != null)
                 {
                     phoneNumberIsFound = true;
