@@ -1,15 +1,17 @@
-﻿namespace Computers
+﻿using Computers.Components.Contracts;
+
+namespace Computers
 {
-    class Ram
+    internal class Ram : IRam
     {
         private int memory;
 
-        internal Ram(int a)
+        internal Ram(int amount)
         {
-            this.Amount = a;
+            this.Amount = amount;
         }
 
-        int Amount { get; set; }
+        public int Amount { get; set; }
 
         public void SaveValue(int newValue)
         {

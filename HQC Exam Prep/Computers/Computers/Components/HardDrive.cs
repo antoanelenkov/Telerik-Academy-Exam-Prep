@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class HardDrive
+    internal class HardDrive
     {
         private bool isInRaid;
         private int hardDrivesInRaid;
@@ -32,8 +32,6 @@
 
             this.data = (Dictionary<int, string>)new Dictionary<int, string>(capacity);this.hds = new List<HardDrive>();this.hds = hardDrives;
         }
-
-        //public bool IsMonochrome { get; set; }
 
         int Capacity{
             get{
@@ -81,20 +79,5 @@
                 return this.data[address];
             }
         }
-        //public void Draw(string a)
-        //{
-        //    if (this.IsMonochrome)
-        //    {
-        //        Console.ForegroundColor = ConsoleColor.Gray;
-        //        Console.WriteLine(a);
-        //        Console.ResetColor();
-        //    }
-        //    else
-        //    {
-        //        Console.ForegroundColor = ConsoleColor.Green;
-        //        Console.WriteLine(a);
-        //        Console.ResetColor();
-        //    }
-        //}
     }
 }

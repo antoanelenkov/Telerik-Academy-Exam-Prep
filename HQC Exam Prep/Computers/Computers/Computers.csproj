@@ -44,15 +44,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ComputerType.cs" />
-    <Compile Include="Components\Cpu.cs" />
+    <Compile Include="Components\Contracts\ICpu.cs" />
+    <Compile Include="Components\Contracts\IHardDrive.cs" />
+    <Compile Include="Components\Contracts\IRam.cs" />
+    <Compile Include="Components\Contracts\IVideoCard.cs" />
+    <Compile Include="Components\CPUs\Cpu.cs" />
+    <Compile Include="Components\CPUs\Cpu32.cs" />
+    <Compile Include="Components\CPUs\Cpu64.cs" />
     <Compile Include="Components\HardDrive.cs" />
-    <Compile Include="Components\IMotherBoard.cs" />
+    <Compile Include="Components\Contracts\IMotherBoard.cs" />
     <Compile Include="Components\LaptopBattery.cs" />
+    <Compile Include="Components\MotherBoard.cs" />
     <Compile Include="Components\Ram.cs" />
     <Compile Include="Components\VideoCard.cs" />
     <Compile Include="Computers\Computer.cs" />
+    <Compile Include="Drawers\ConsoleColorfulDrawer.cs" />
+    <Compile Include="Drawers\ConsoleMonochromeDrawer.cs" />
+    <Compile Include="Drawers\IDrawer.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomGenerators\IRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\SystemRandomGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

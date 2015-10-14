@@ -1,6 +1,6 @@
-﻿namespace Computers.UI.Console.Components
+﻿namespace Computers.Components.Contracts
 {
-    public interface IMotherboard
+    public interface IMotherBoard
     {
         int LoadRamValue();
         void SaveRamValue(int value);

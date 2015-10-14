@@ -1,4 +1,5 @@
-﻿using Computers.UI.Console.Common;
+﻿using Computers.Components.CPUs;
+using Computers.UI.Console.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,9 +33,13 @@ namespace Computers.UI.Console.Computers
 
         public void Play(int guessNumber)
         {
-            Cpu.rand(1, 10);
+            Cpu.SaveRandomNumberInRange(1, 10);
             var number = Ram.LoadValue();
-            if (number + 1 != guessNumber + 1) Videocard.Draw(string.Format("You didn't guess the number {0}.", number));
+            if (number + 1 != guessNumber + 1)
+            {
+                Videocard.Draw(string.Format("You didn't guess the number {0}.", number));
+            }
+
             else Videocard.Draw("You win!");
         }
 
@@ -48,7 +53,7 @@ namespace Computers.UI.Console.Computers
         internal void Process(int data)
         {
             Ram.SaveValue(data);
-            Cpu.SquareNumber();
+            Cpu.SquareGeneratedRandomNumber();
         }
     }
 }

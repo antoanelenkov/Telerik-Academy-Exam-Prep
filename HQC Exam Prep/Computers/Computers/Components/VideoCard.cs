@@ -1,31 +1,20 @@
 ﻿namespace Computers
 {
+    using Drawers;
     using System;
 
-    class VideoCard
+    internal class VideoCard
     {
-
-        public VideoCard(bool isMonochrome)
+        public VideoCard(IDrawer drawer)
         {
-            this.IsMonochrome = isMonochrome;
+            this.Drawer = drawer;
         }
 
-        public bool IsMonochrome { get; set; }
+        public IDrawer Drawer { get; set; }
 
-        public void Draw(string a)
+        public void Draw(string msg)
         {
-            if (this.IsMonochrome)
-            {
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine(a);
-                Console.ResetColor();
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(a);
-                Console.ResetColor();
-            }
+            this.Drawer.Draw(msg);
         }
     }
 }
