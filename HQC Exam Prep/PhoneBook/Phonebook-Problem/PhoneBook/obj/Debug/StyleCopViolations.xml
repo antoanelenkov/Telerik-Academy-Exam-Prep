@@ -1,3 +1,1 @@
-<StyleCopViolations>
-  <Violation LineNumber="6" Source="D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\HQC Exam Prep\PhoneBook\Phonebook-Problem\PhoneBook\Factories\Contracts\ICommandFactory.cs" RuleNamespace="StyleCop.CSharp.MaintainabilityRules" Rule="AccessModifierMustBeDeclared" RuleId="SA1400">The interface must have an access modifier.</Violation>
-</StyleCopViolations>
+<StyleCopViolations />

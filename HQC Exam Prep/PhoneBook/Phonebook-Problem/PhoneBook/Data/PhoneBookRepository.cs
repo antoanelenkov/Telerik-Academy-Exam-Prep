@@ -6,7 +6,7 @@ namespace PhoneBook.Data
 
     using Contracts;
 
-    internal class PhoneBookRepository : IPhoneBookRepository
+    public class PhoneBookRepository : IPhoneBookRepository
     {
         private IList<IUserEntry> entries = new List<IUserEntry>();
 
