@@ -9,6 +9,8 @@ namespace PhoneBook.Data.Contracts
 
         int ChangePhone(string oldPhoneNumber, string newPhoneNumber);
 
-        UserEntry[] ListEntries(int startIndex, int count);
+        void RemovePhone(string phoneNumberToRemove);
+
+        IUserEntry[] ListEntries(int startIndex, int count);
     }
 }

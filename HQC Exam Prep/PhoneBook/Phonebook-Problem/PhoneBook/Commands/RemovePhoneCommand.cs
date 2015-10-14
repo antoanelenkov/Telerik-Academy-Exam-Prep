@@ -1,7 +1,6 @@
-﻿using PhoneBook.Commands.Contracts;
-
-namespace PhoneBook.Commands
+﻿namespace PhoneBook.Commands
 {
+    using Contracts;
     using Data.Contracts;
     using OutputMessageFormatters.Contracts;
     using PhoneNumberFormatters.Contracts;
@@ -11,13 +10,13 @@ namespace PhoneBook.Commands
     using System.Text;
     using System.Threading.Tasks;
 
-    class ChangePhoneCommand : ICommand
+    class RemovePhoneCommand:ICommand
     {
         private readonly IPhoneBookRepository data;
         private readonly IPhoneNumberFormatter formatter;
         private readonly IOutputMessageFormatter output;
 
-        public ChangePhoneCommand(IPhoneNumberFormatter formatter, IPhoneBookRepository data, IOutputMessageFormatter output)
+        public RemovePhoneCommand(IPhoneNumberFormatter formatter, IPhoneBookRepository data, IOutputMessageFormatter output)
         {
             this.formatter = formatter;
             this.data = data;
@@ -26,9 +25,16 @@ namespace PhoneBook.Commands
 
         public void Execute(string[] input)
         {
-            var changedPhones = this.data.ChangePhone(this.formatter.Format(input[0]), this.formatter.Format(input[1]));
+            var phoneNumber = formatter.Format(input[0]);
 
-            this.output.AddToOutputMessage(string.Empty + changedPhones + " numbers changed");
+            try
+            {
+                this.data.RemovePhone(phoneNumber);
+            }
+            catch(ArgumentException ex)
+            {
+                this.output.AddToOutputMessage(ex.Message);
+            }
         }
     }
 }

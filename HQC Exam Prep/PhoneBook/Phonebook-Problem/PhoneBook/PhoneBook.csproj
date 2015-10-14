@@ -48,20 +48,26 @@
     <Compile Include="Commands\AddPhoneCommand.cs" />
     <Compile Include="Commands\ChangePhoneCommand.cs" />
     <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\ListPhoneNumbersCommand.cs" />
+    <Compile Include="Commands\NullCommand.cs" />
+    <Compile Include="Commands\RemovePhoneCommand.cs" />
     <Compile Include="Common\Constants\GlobalConstants.cs" />
     <Compile Include="Common\Enums\CommandType.cs" />
     <Compile Include="Data\Contracts\IPhoneBookRepository.cs" />
-    <Compile Include="IPhonebookRepository.cs" />
+    <Compile Include="Entries\Contracts\IUserEntry.cs" />
+    <Compile Include="Factories\CommandFactory.cs" />
+    <Compile Include="Factories\Contracts\ICommandFactory.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="OutputMessage\Contracts\IOutputMessage.cs" />
-    <Compile Include="OutputMessage\OutputMessage.cs" />
+    <Compile Include="OutputMessageFormatters\Contracts\IOutputMessage.cs" />
+    <Compile Include="OutputMessageFormatters\OutputMessage.cs" />
     <Compile Include="PhoneNumberFormatters\Contracts\IPhoneNumberFormatter.cs" />
     <Compile Include="PhoneNumberFormatters\PhoneNumberFormatter.cs" />
     <Compile Include="Printers\Contracts\IPrinter.cs" />
     <Compile Include="Printers\ConsolePrinter.cs" />
-    <Compile Include="REP.cs" />
-    <Compile Include="RepNew.cs" />
-    <Compile Include="UserEntry.cs" />
+    <Compile Include="Data\PhoneBookRepository.cs" />
+    <Compile Include="Readers\ConsoleReader.cs" />
+    <Compile Include="Readers\Contracts\IReader.cs" />
+    <Compile Include="Entries\UserEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

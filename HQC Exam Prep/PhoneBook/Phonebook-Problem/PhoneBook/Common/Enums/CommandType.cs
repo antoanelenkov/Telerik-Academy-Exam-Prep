@@ -4,6 +4,7 @@
     {
         AddPhoneNumbers,
         ChangePhoneNumber,
-        ListPhoneNumbers
+        ListPhoneNumbers,
+        RemovePhoneNumber
     }
 }

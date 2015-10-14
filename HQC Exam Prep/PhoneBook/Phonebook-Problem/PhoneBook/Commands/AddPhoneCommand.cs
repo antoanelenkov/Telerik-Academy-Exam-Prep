@@ -3,16 +3,16 @@
     using System.Linq;
     using Contracts;
     using Data.Contracts;
-    using OutputMessage.Contracts;
     using PhoneNumberFormatters.Contracts;
+    using OutputMessageFormatters.Contracts;
 
     internal class AddPhoneCommand : ICommand
     {
         private readonly IPhoneBookRepository data;
         private readonly IPhoneNumberFormatter formatter;
-        private readonly IOutputMessage output;
+        private readonly IOutputMessageFormatter output;
 
-        public AddPhoneCommand(IPhoneNumberFormatter formatter, IPhoneBookRepository data, IOutputMessage output)
+        public AddPhoneCommand(IPhoneNumberFormatter formatter, IPhoneBookRepository data, IOutputMessageFormatter output)
         {
             this.formatter = formatter;
             this.data = data;

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace PhoneBook.Problem_2
 {
-    internal class UserEntry : IComparable<UserEntry>
+    internal class UserEntry : IComparable<UserEntry>, IUserEntry
     {
-        public ISet<string> Phones;
+        public ISet<string> Phones { get; set; }
 
         public UserEntry(string name, ISet<string> phones)
         {
@@ -21,20 +21,20 @@ namespace PhoneBook.Problem_2
             return this.Name.CompareTo(other.Name);
         }
 
-        public string ToString()
+        public override string ToString()
         {
             var sb = new StringBuilder();
 
             sb.Append('[');
             sb.Append(Name);
 
-            var flag = true;
+            var isFirstNumber = true;
             foreach (var phone in Phones)
             {
-                if (flag)
+                if (isFirstNumber)
                 {
                     sb.Append(": ");
-                    flag = false;
+                    isFirstNumber = false;
                 }
                 else
                 {

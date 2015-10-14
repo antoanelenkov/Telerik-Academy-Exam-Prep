@@ -9,44 +9,40 @@
     using PhoneNumberFormatters.Contracts;
     using Printers;
     using Printers.Contracts;
+    using Factories.Contracts;
+    using Factories;
+    using Data.Contracts;
+    using OutputMessageFormatters.Contracts;
+    using OutputMessageFormatters;
+    using Commands.Contracts;
+    using Readers.Contracts;
+    using Readers;
 
     namespace Problem_2
     {
         internal class PhoneBookEngine
         {
-            private static readonly IPhonebookRepository Data = new RepNew(); // this works!
-            private static readonly StringBuilder Output = new StringBuilder();
-
+            private static readonly IPhoneBookRepository Data = new PhoneBookRepository(); // this works!
+            private static readonly IOutputMessageFormatter Output = new OutputMessageFormatter();
             private static readonly IPrinter Printer = new ConsolePrinter();
+            private static readonly IReader Reader = new ConsoleReader();
             private static readonly IPhoneNumberFormatter Formatter = new PhoneNumberFormatter();
+            private static readonly ICommandFactory commandFactory = new CommandFactory(Formatter,Data,Output);
+      
 
             private static void Main()
             {
                 while (true)
                 {
-                    var input = Console.ReadLine();
+                    var input = Reader.ReadInput();
 
-                    if (input == "End" || input == null)
+                    if (!IsValidInput(input))
                     {
-                        // Error reading from console 
                         break;
                     }
 
                     var indexOfLeftBRacket = input.IndexOf('(');
-
-                    if (indexOfLeftBRacket == -1)
-                    {
-                        Printer.Print("error!");
-                        Environment.Exit(0);
-                    }
-
                     var typeOfCommand = input.Substring(0, indexOfLeftBRacket);
-
-                    if (!input.EndsWith(")"))
-                    {
-                        break;
-                    }
-
                     var argumentsText = input.Substring(indexOfLeftBRacket + 1, input.Length - indexOfLeftBRacket - 2);
                     var arguments = argumentsText.Split(',');
 
@@ -55,76 +51,59 @@
                         arguments[j] = arguments[j].Trim();
                     }
 
+                    ICommand command=null;
                     if (typeOfCommand.StartsWith("AddPhone") && arguments.Length >= 2)
                     {
-                        ExecuteCommand(CommandType.AddPhoneNumbers, arguments);
+                        command = commandFactory.CreateCommand(CommandType.AddPhoneNumbers);     
                     }
                     else if ((typeOfCommand == "ChangePhone") && (arguments.Length == 2))
                     {
-                        ExecuteCommand(CommandType.ChangePhoneNumber, arguments);
+                        command = commandFactory.CreateCommand(CommandType.ChangePhoneNumber);
                     }
                     else if ((typeOfCommand == "List") && (arguments.Length == 2))
                     {
-                        ExecuteCommand(CommandType.ListPhoneNumbers, arguments);
+                        command = commandFactory.CreateCommand(CommandType.ListPhoneNumbers);
+                    }
+                    else if ((typeOfCommand == "Remove") && (arguments.Length == 1))
+                    {
+                        command = commandFactory.CreateCommand(CommandType.RemovePhoneNumber);
                     }
                     else
                     {
                         Printer.Print("Invalid format of input!");
                         Environment.Exit(0);
                     }
+
+                    if (command != null)
+                    {
+                        command.Execute(arguments);
+                    }                   
                 }
 
                 Printer.Print(Output.ToString());
             }
 
-            private static void ExecuteCommand(CommandType cmd, string[] strings)
+            private static bool IsValidInput(string input)
             {
-                if (cmd == CommandType.AddPhoneNumbers) // first command
+                if (input == "End" || input == null)
                 {
-                    var name = strings[0];
-                    var phoneNumbers = strings.Skip(1).ToList();
-
-                    for (var i = 0; i < phoneNumbers.Count; i++)
-                    {
-                        phoneNumbers[i] = Formatter.Format(phoneNumbers[i]);
-                    }
-
-                    var isAdded = Data.AddPhone(name, phoneNumbers);
-
-                    if (isAdded)
-                    {
-                        AddToOutputMessage("Phone entry created.");
-                    }
-                    else
-                    {
-                        AddToOutputMessage("Phone entry merged");
-                    }
+                    return false;
                 }
-                else if (cmd == CommandType.ChangePhoneNumber) // second command
+
+                var indexOfLeftBRacket = input.IndexOf('(');
+
+                if (indexOfLeftBRacket == -1)
                 {
-                    AddToOutputMessage("" + Data.ChangePhone(Formatter.Format(strings[0]), Formatter.Format(strings[1])) +
-                                       " numbers changed");
+                    Printer.Print("error!");
+                    return false;
                 }
-                else if (cmd == CommandType.ListPhoneNumbers)
-                {
-                    try
-                    {
-                        IEnumerable<UserEntry> entries = Data.ListEntries(int.Parse(strings[0]), int.Parse(strings[1]));
-                        foreach (var entry in entries)
-                        {
-                            AddToOutputMessage(entry.ToString());
-                        }
-                    }
-                    catch (ArgumentOutOfRangeException)
-                    {
-                        AddToOutputMessage("Invalid range");
-                    }
-                }
-            }
 
-            private static void AddToOutputMessage(string text)
-            {
-                Output.AppendLine(text);
+                if (!input.EndsWith(")"))
+                {
+                    return false;
+                }
+
+                return true;
             }
         }
     }

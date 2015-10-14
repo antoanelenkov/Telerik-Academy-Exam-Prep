@@ -1,8 +1,8 @@
 ﻿using System.Text;
 
-namespace PhoneBook.OutputMessage.Contracts
+namespace PhoneBook.OutputMessageFormatters.Contracts
 {
-    interface IOutputMessage
+    interface IOutputMessageFormatter
     {
         StringBuilder Output { get; set; }
 
