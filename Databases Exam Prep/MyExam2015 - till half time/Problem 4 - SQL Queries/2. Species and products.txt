@@ -1,0 +1,19 @@
+USE PetStore
+GO
+
+
+//First solution
+SELECT s.Name, COUNT(p.name) AS [Number of Products] FROM Species s, Products p, Products_Species ps
+WHERE s.Id=ps.SpeciesId
+AND ps.ProductId=p.Id
+GROUP BY s.Name
+ORDER BY COUNT(p.name)
+
+//Second solution
+SELECT s.Name, COUNT(p.name) AS [Number of Products] FROM Species s 
+JOIN Products_Species ps
+ON s.Id=ps.SpeciesId
+JOIN  Products p
+ON s.Id=ps.SpeciesId
+GROUP BY s.Name
+ORDER BY COUNT(p.name)

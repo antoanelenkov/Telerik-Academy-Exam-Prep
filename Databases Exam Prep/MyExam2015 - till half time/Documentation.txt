@@ -1,0 +1,28 @@
+Connection string for "PetStore" database:
+  <connectionStrings>
+    <add name="PetStoreEntities" connectionString="metadata=res://*/PetStoreEntities.csdl|res://*/PetStoreEntities.ssdl|res://*/PetStoreEntities.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.;initial catalog=PetStore;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient"/>
+  </connectionStrings>
+
+Connection string for "SocialNetwork" database:
+  <connectionStrings>
+    <add name="SocialNetwork" connectionString="Data Source=.;Initial Catalog=SocialNetwork;Integrated Security=True" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+Relationships for "PetStore" database: 
+Species -> Pet = 1:many
+Species -> Product = 1:many
+Country -> Species = 1:many
+Category -> Product = 1:many
+Product -> Species = many:many
+
+
+Relationships for "SocialNetwork" database: 
+UserProfile has many friendshipRequest - 1 : many
+UserProfile has many Posts and Posts has many users  - many:many
+UserProfile has many images - 1 : many
+UserProfile has many Messages - 1 : many
+
+
+
+	
+JSON Result files location: (fill in here)
