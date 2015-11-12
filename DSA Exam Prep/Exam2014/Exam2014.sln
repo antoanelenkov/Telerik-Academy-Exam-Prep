@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GirlsGoneWild", "02.GirlsGoneWild\02.GirlsGoneWild.csproj", "{8E50ED7C-8C4C-4D56-956B-D291D1560068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Portals", "05.Portals\05.Portals.csproj", "{3C77B6FF-1FA6-4751-A0BD-763BE1999015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E50ED7C-8C4C-4D56-956B-D291D1560068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E50ED7C-8C4C-4D56-956B-D291D1560068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E50ED7C-8C4C-4D56-956B-D291D1560068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E50ED7C-8C4C-4D56-956B-D291D1560068}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
