@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class AppDbContext : IdentityDbContext<User>
+    public class AppDbContext : IdentityDbContext<User>, IAppDbContext
     {
         public AppDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
