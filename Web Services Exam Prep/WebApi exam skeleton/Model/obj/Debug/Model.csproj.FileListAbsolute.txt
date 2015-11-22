@@ -1,0 +1,14 @@
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Model.dll.config
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Model.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Model.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\obj\Debug\Model.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Model\obj\Debug\Model.pdb

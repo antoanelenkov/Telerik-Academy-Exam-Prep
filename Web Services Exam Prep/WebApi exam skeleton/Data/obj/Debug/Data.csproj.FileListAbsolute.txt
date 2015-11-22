@@ -1,0 +1,16 @@
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Data.dll.config
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Data.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Data.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Model.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Model.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\obj\Debug\Data.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Data\obj\Debug\Data.pdb
