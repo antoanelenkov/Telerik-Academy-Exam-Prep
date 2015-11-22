@@ -5,9 +5,9 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    public class EfGenericRepository<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IRepository<T> where T : class
     {
-        public EfGenericRepository(IAppDbContext context)
+        public GenericRepository(IAppDbContext context)
         {
             if (context == null)
             {

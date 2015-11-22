@@ -1,0 +1,15 @@
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Services.Data.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Services.Data.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Data.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Model.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\EntityFramework.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Data.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Model.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\EntityFramework.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\obj\Debug\Services.Data.csprojResolveAssemblyReference.cache
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\obj\Debug\Services.Data.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Services.Data\obj\Debug\Services.Data.pdb
