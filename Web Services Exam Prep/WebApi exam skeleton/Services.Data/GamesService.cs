@@ -20,7 +20,20 @@ namespace Services.Data
 
         public IQueryable<Game> GetGames(int page = 0)
         {
-            throw new NotImplementedException();
+            return this.games.All();
+        }
+
+        public Game CreateGame(string name)
+        {
+            var newGame = new Game
+            {
+                Name=name
+            };
+
+            this.games.Add(newGame);
+            this.games.SaveChanges();
+
+            return newGame;
         }
     }
 }

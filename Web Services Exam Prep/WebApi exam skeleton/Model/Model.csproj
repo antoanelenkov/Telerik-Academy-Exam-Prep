@@ -58,7 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game.cs" />
+    <Compile Include="GameStateType.cs" />
+    <Compile Include="Guess.cs" />
+    <Compile Include="Notification.cs" />
+    <Compile Include="NotificationState.cs" />
+    <Compile Include="NotificationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,5 @@
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Common\bin\Debug\Common.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Common\bin\Debug\Common.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Common\obj\Debug\Common.dll
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\Web Services Exam Prep\BullsAndCows\Common\obj\Debug\Common.pdb
