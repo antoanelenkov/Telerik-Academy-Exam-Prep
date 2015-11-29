@@ -1,0 +1,6 @@
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\bin\Debug\04.RecoverMessage.exe.config
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\bin\Debug\04.RecoverMessage.exe
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\bin\Debug\04.RecoverMessage.pdb
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\obj\Debug\04.RecoverMessage.csprojResolveAssemblyReference.cache
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\obj\Debug\04.RecoverMessage.exe
+D:\Antoan\Telerik Academy\Telerik-Academy-Exam-Prep\DSA Exam Prep\Exam2013\04.RecoverMessage\obj\Debug\04.RecoverMessage.pdb
