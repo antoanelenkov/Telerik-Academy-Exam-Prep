@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GirlsGoneWild", "02.Girl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Portals", "05.Portals\05.Portals.csproj", "{3C77B6FF-1FA6-4751-A0BD-763BE1999015}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.OnlineMarket", "03.OnlineMarket\03.OnlineMarket.csproj", "{7114A340-BF3E-4E88-8218-1D1C473DA432}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C77B6FF-1FA6-4751-A0BD-763BE1999015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7114A340-BF3E-4E88-8218-1D1C473DA432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7114A340-BF3E-4E88-8218-1D1C473DA432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7114A340-BF3E-4E88-8218-1D1C473DA432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7114A340-BF3E-4E88-8218-1D1C473DA432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

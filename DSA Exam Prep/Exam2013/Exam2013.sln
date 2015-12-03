@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.RecoverMessage", "04.Rec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Frames", "01.Frames\01.Frames.csproj", "{73F42FDB-B119-4B3A-A583-B006DDA61880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinth2", "Labyrinth2\Labyrinth2.csproj", "{DB4DEF9C-34C9-4B57-97F5-4E2F13578DDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{73F42FDB-B119-4B3A-A583-B006DDA61880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73F42FDB-B119-4B3A-A583-B006DDA61880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73F42FDB-B119-4B3A-A583-B006DDA61880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4DEF9C-34C9-4B57-97F5-4E2F13578DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4DEF9C-34C9-4B57-97F5-4E2F13578DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4DEF9C-34C9-4B57-97F5-4E2F13578DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4DEF9C-34C9-4B57-97F5-4E2F13578DDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
