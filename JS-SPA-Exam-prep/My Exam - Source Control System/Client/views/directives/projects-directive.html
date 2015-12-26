@@ -1,0 +1,26 @@
+﻿<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            License
+        </th>
+        <th>
+            Total Users
+        </th>
+        <th>
+            Created On
+        </th>
+        <th ng-show="vm.identity && vm.identity.isAuthenticated()">
+            Picture
+        </th>
+    </tr>
+    <tr ng-repeat="project in vm.projects">
+        <td><a href="#/projects/{{project.Id}}">{{project.Name}}</a></td>
+        <td>{{project.License}}</td>
+        <td>{{project.TotalUsers}}</td>
+        <td>{{project.CreatedOn | beautifulDate}}</td>
+        <td ng-show="vm.identity && vm.identity.isAuthenticated()"><img src="{{project.License | licenseImg}}" alt="no pic"/></td>
+    </tr>
+</table>

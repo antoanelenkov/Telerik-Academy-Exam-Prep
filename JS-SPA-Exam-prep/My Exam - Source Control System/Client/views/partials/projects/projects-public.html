@@ -1,0 +1,60 @@
+﻿<div>
+    <h1 class="text-center">Projects</h1>
+    <div ng-show="vm.identity.isAuthenticated()" class="row">
+        <div class="container">
+            <hr />
+            <h2 class="text-center">
+                <a href="/#/projects/add" class='btn     btn-primary'>Create</a>
+            </h2>
+            <hr />
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="text-center">Sort</p>
+                    <select class="form-control" ng-model="vm.request.OrderBy">
+                        <option value="date">Date</option>
+                        <option value="collaborators">Collaborators</option>
+                        <option value="name">name</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-center">Order</p>
+                    <select class="form-control" ng-model="vm.request.OrderType">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <p class="text-center">Username</p>
+                    <input type="text" cities class="form-control" ng-model="vm.request.ByUser" />
+                </div>
+                <div class="col-md-2">
+                    <p class="text-center">Page size</p>
+                    <input type="number"  min="1" max="20" cities class="form-control" ng-model="vm.request.PageSize" />
+                </div>
+                <div class="col-md-2">
+                    <p class="text-center">Page number</p>
+                    <input type="number" min="1" cities class="form-control" ng-model="vm.request.Page" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-2">
+                    <input type="checkbox" ng-checked="vm.request.OnlyPublic" ng-model="vm.request.OnlyPublic" /> Only Public
+                    <br />
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-info" ng-click="vm.filter(vm.request)">Filter</button>
+                </div>
+                <div pager class="col-md-8" />
+            </div>
+        </div>
+        <hr />
+        <div class="container">
+            <div projects ng-if="vm.projects.length" />
+            <div ng-if="!vm.projects.length">
+                <h2 class="text-center">No results!</h2>
+            </div>
+        </div>
+    </div>
+    <div ng-show="!vm.identity.isAuthenticated()" projects />
+</div>

@@ -1,0 +1,21 @@
+﻿<div class="container" ng-show="vm.isAuthenticated">
+    <div class="well">
+        <form name="createCommitsForm" class="form-horizontal">
+            <fieldset>
+                <legend>Create New Commit</legend>
+                <div class="form-group">
+                    <label for="source-code" class="col-md-2 control-label">Source Code</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Source code" ng-required="true" ng-model="commit.sourceCode" id="name" />
+                        </div>
+                </div>
+                <div class="pull-right">
+                    <button ng-click="vm.createCommit(commit)" ng-disabled="createCommitsForm.$invalid" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

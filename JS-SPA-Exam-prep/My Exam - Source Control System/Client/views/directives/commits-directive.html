@@ -1,0 +1,14 @@
+﻿<table class="table">
+    <tr>
+        <th>
+            User name
+        </th>
+        <th>
+            Created On
+        </th>
+    </tr>
+    <tr ng-repeat="commit in vm.commits">
+        <td><a href="#/commits/{{commit.Id}}">{{commit.UserName}}</a></td>
+        <td>{{commit.CreatedOn | beautifulDate}}</td>
+    </tr>
+</table>

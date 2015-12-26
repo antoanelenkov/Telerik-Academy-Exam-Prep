@@ -1,0 +1,40 @@
+﻿<div class="container">
+    <h1 class="text-center jumbotron">{{vm.project.Name}}</h1>
+    <div class="row text-center">Created on: {{vm.project.CreatedOn | beautifulDate}}</div>
+    <div class="row text-center">Total users contributed: {{vm.project.TotalUsers}}</div>
+    <div class="row text-center">License type: {{vm.project.License}}</div>
+    <hr />
+    <h2 class="text-center">
+        <a href="{{vm.currentLocation}}/addcommits" class='btn     btn-primary'>Add commit</a>
+    </h2>
+    <hr />
+    <h2  class="text-center">
+        All Commits
+    </h2>
+    <div  commits />
+    <hr />
+    <div id="add-collaborators" ng-show="vm.isCollaborator" class="container">
+        <form name="addCollaboratorForm" class="form-horizontal">
+            <fieldset>
+                <legend>Add collaborator</legend>
+                <div class="form-group">
+                    <label for="collaborator" class="col-md-2 control-label">Email of collaborator</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" placeholder="Collaborator email" ng-required="true" ng-model="userName" id="collaborator" />
+                    </div>
+                </div>
+                <div class="pull-right">    
+                    <button ng-click="vm.addCollaborator(userName)" ng-disabled="addCollaboratorForm.$invalid" class="btn btn-primary">
+                        Add
+                    </button>
+                    <a href="#/" class="btn btn-primary">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <hr />
+    <h2 class="text-center">
+        All collaborators
+    </h2>
+    <div collaborators />
+</div>

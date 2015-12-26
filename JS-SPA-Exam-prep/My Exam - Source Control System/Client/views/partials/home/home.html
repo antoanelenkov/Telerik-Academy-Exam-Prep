@@ -1,0 +1,41 @@
+﻿<div class="container">
+    <div class="jumbotron text-center">
+        <h1>Welcome to TelerikHub</h1>
+        <h3>Code for fun, if it's not fun, take drugs :D</h3>
+    </div>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-3">Users</div>
+            <div class="col-md-3">Projects</div>
+            <div class="col-md-3">Commits</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">{{vm.stats.Users}}</div>
+            <div class="col-md-3">{{vm.stats.Projects}}</div>
+            <div class="col-md-3">{{vm.stats.Commits}}</div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Latest projects</h3>
+                </div>
+                <div class="panel-body">
+                    <div projects/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading"> 
+                    <h3 class="panel-title text-center">Latest commits</h3>
+                </div>
+                <div class="panel-body">
+                    <div commits/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
